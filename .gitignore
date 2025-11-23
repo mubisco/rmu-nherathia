@@ -1,0 +1,75 @@
+# LaTeX auxiliary files
+*.aux
+*.lof
+*.log
+*.lot
+*.fls
+*.out
+*.toc
+*.fmt
+*.fot
+*.cb
+*.cb2
+.*.lb
+
+# LaTeX intermediate & output files
+*.dvi
+*.xdv
+*.pdf
+*.ps
+*.synctex
+*.synctex(busy)
+*.synctex.gz
+*.synctex.gz(busy)
+
+# LaTeX build tool files
+*.fdb_latexmk
+*.fdb_latexmk*
+*.synctex(busy)
+*-converted-to.*
+
+# BibTeX files
+*.bbl
+*.bcf
+*.blg
+*-blx.aux
+*-blx.bib
+*.run.xml
+
+# Makeindex
+*.idx
+*.ilg
+*.ind
+
+# Nomenclature
+*.nlo
+*.nls
+*.nlg
+
+# Glossaries
+*.acn
+*.acr
+*.glg
+*.glo
+*.gls
+*.glsdefs
+*.lzo
+*.lzs
+
+# Temporary files
+*~
+*.swp
+*.swo
+*.bak
+*.backup
+*.tmp
+
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editor files
+.vscode/
+.idea/
+*.sublime-*
