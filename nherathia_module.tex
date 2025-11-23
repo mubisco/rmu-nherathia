@@ -8,8 +8,97 @@
 \usepackage{geometry}
 \geometry{margin=2.5cm}
 
-% Optional: Better chapter/section formatting
-\usepackage{titlesec}
+% Layout packages
+\usepackage{multicol}               % Two-column layout
+\usepackage{graphicx}               % Images
+\usepackage[most]{tcolorbox}       % Colored boxes for widgets
+\usepackage{titlesec}               % Better chapter/section formatting
+\usepackage{eso-pic}                % Background images
+\usepackage{tikz}                   % For opacity control
+
+% ============================================================================
+% PARCHMENT BACKGROUND
+% ============================================================================
+\AddToShipoutPictureBG{%
+  \AtPageLowerLeft{%
+    \begin{tikzpicture}
+      \node[inner sep=0pt,opacity=0.50] {\includegraphics[width=\paperwidth,height=\paperheight]{images/parchment.jpg}};
+    \end{tikzpicture}%
+  }%
+}
+
+% ============================================================================
+% CUSTOM WIDGET DEFINITIONS
+% ============================================================================
+
+% Widget 1: Read Aloud Box (for player descriptions)
+\newtcolorbox{readaloud}{
+  enhanced,
+  breakable,
+  colback=white,
+  colframe=orange!70!black,
+  boxrule=0pt,
+  leftrule=3pt,
+  rightrule=3pt,
+  toprule=0pt,
+  bottomrule=0pt,
+  sharp corners=all,
+  left=8pt, right=8pt, top=5pt, bottom=5pt
+}
+
+% Widget 2: Rules/Clarifications Box
+\newtcolorbox{rulesbox}{
+  enhanced,
+  breakable,
+  colback=blue!5,
+  colframe=blue!60!black,
+  fonttitle=\bfseries,
+  title=Reglas,
+  attach boxed title to top left={yshift=-2mm, xshift=5mm},
+  boxed title style={
+    colback=blue!60!black,
+    sharp corners
+  },
+  sharp corners=all,
+  boxrule=1pt,
+  left=5pt, right=5pt, top=8pt, bottom=5pt
+}
+
+% Widget 3: NPC Sheet
+\newcommand{\npcsheet}[6][]{%
+  \begin{tcolorbox}[
+    enhanced,
+    breakable,
+    colback=green!5,
+    colframe=green!60!black,
+    fonttitle=\bfseries\large,
+    title=#2,
+    sharp corners=all,
+    boxrule=1.5pt,
+    left=8pt, right=8pt, top=10pt, bottom=8pt
+  ]
+  % Optional image
+  \ifx&#1&%
+    % No image provided
+  \else
+    \begin{center}
+      \includegraphics[width=0.6\linewidth]{#1}
+    \end{center}
+    \vspace{3mm}
+  \fi
+  
+  \textbf{Apariencia:} #3
+  
+  \vspace{2mm}
+  \textbf{Voz:} #4
+  
+  \vspace{2mm}
+  \textbf{Motivación:} #5
+  
+  \vspace{2mm}
+  \textbf{Secretos:} #6
+  \end{tcolorbox}
+}
 
 \title{Ecos del Alba Perdida \\ \large Módulo para Rolemaster Unified}
 \author{}
