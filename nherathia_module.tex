@@ -1,6 +1,6 @@
 % !TeX program = xelatex
 
-\documentclass[11pt,a4paper,oneside]{book}
+\documentclass[10pt,a4paper,oneside]{book}
 
 \usepackage[spanish]{babel}
 \usepackage[T1]{fontenc}
@@ -15,6 +15,24 @@
 \usepackage{titlesec}               % Better chapter/section formatting
 \usepackage{eso-pic}                % Background images
 \usepackage{tikz}                   % For opacity control
+\usepackage{xcolor}
+
+
+% ============================================================================
+% COLOR THEME DEFINITIONS (HTML format for easy editing)
+% ============================================================================
+% Read Aloud Box colors
+\definecolor{ReadAloudBorder}{HTML}{CC6600}   % Orange-brown border
+\definecolor{ReadAloudBG}{HTML}{FFFFFF}       % White background
+
+% Rules Box colors
+\definecolor{RulesBorder}{HTML}{3366CC}       % Blue border
+\definecolor{RulesBG}{HTML}{E6F0FF}           % Light blue background
+\definecolor{RulesTitleBG}{HTML}{3366CC}      % Blue title background
+
+% NPC Sheet colors
+\definecolor{NPCBorder}{HTML}{2E8B57}         % Sea green border
+\definecolor{NPCBG}{HTML}{F0FFF0}             % Honeydew background
 
 % ============================================================================
 % PARCHMENT BACKGROUND
@@ -35,8 +53,8 @@
 \newtcolorbox{readaloud}{
   enhanced,
   breakable,
-  colback=white,
-  colframe=orange!70!black,
+  colback=ReadAloudBG,
+  colframe=ReadAloudBorder,
   boxrule=0pt,
   leftrule=3pt,
   rightrule=3pt,
@@ -50,53 +68,94 @@
 \newtcolorbox{rulesbox}{
   enhanced,
   breakable,
-  colback=blue!5,
-  colframe=blue!60!black,
+  colback=RulesBG,
+  colframe=RulesBorder,
   fonttitle=\bfseries,
   title=Reglas,
   attach boxed title to top left={yshift=-2mm, xshift=5mm},
   boxed title style={
-    colback=blue!60!black,
+    colback=RulesTitleBG,
     sharp corners
   },
   sharp corners=all,
   boxrule=1pt,
-  left=5pt, right=5pt, top=8pt, bottom=5pt
+  left=5pt, right=5pt, top=8pt, bottom=5pt,
+  before skip=8pt plus 2pt,
+  after skip=8pt plus 2pt
 }
 
-% Widget 3: NPC Sheet
-\newcommand{\npcsheet}[6][]{%
+% Widget 3: NPC Sheet Environment (readable, named sections)
+% Usage: \begin{npcsheet}[subtitle]{NPC Name} ... \end{npcsheet}
+\newenvironment{npcsheet}[2][]{%
+  % #1 = optional subtitle
+  % #2 = NPC name (title)
+  \def\npcsubtitle{#1}%
+  \def\npcname{#2}%
+  \def\npcimagedata{}%
+  \def\npcappearance{}%
+  \def\npcvoice{}%
+  \def\npcmotivation{}%
+  \def\npcsecrets{}%
+  % Commands to set each field
+  \newcommand{\npcimage}[1]{\def\npcimagedata{##1}}%
+  \newcommand{\appearance}[1]{\def\npcappearance{##1}}%
+  \newcommand{\voice}[1]{\def\npcvoice{##1}}%
+  \newcommand{\motivation}[1]{\def\npcmotivation{##1}}%
+  \newcommand{\secrets}[1]{\def\npcsecrets{##1}}%
+}{%
+  % End of environment - now render the box
   \begin{tcolorbox}[
     enhanced,
-    breakable,
-    colback=green!5,
-    colframe=green!60!black,
+    colback=NPCBG,
+    colframe=NPCBorder,
     fonttitle=\bfseries\large,
-    title=#2,
+    title=\npcname,
     sharp corners=all,
     boxrule=1.5pt,
-    left=8pt, right=8pt, top=10pt, bottom=8pt
+    left=8pt, right=8pt, top=10pt, bottom=8pt,
+    before skip=10pt plus 2pt,
+    after skip=10pt plus 2pt
   ]
-  % Optional image
-  \ifx&#1&%
-    % No image provided
+  % Render subtitle if provided
+  \ifx\npcsubtitle\empty
+  \else
+    {\small\itshape\npcsubtitle}
+    \vspace{2mm}
+    
+  \fi
+  
+  % Render image if provided
+  \ifx\npcimagedata\empty
   \else
     \begin{center}
-      \includegraphics[width=0.6\linewidth]{#1}
+      \includegraphics[width=0.6\linewidth]{\npcimagedata}
     \end{center}
     \vspace{3mm}
   \fi
   
-  \textbf{Apariencia:} #3
+  % Render fields
+  \ifx\npcappearance\empty\else
+    \textbf{Apariencia:} \npcappearance
+    \vspace{2mm}
+    
+  \fi
   
-  \vspace{2mm}
-  \textbf{Voz:} #4
+  \ifx\npcvoice\empty\else
+    \textbf{Voz:} \npcvoice
+    \vspace{2mm}
+    
+  \fi
   
-  \vspace{2mm}
-  \textbf{Motivación:} #5
+  \ifx\npcmotivation\empty\else
+    \textbf{Motivación:} \npcmotivation
+    \vspace{2mm}
+    
+  \fi
   
-  \vspace{2mm}
-  \textbf{Secretos:} #6
+  \ifx\npcsecrets\empty\else
+    \textbf{Secretos:} \npcsecrets
+  \fi
+  
   \end{tcolorbox}
 }
 
@@ -109,6 +168,11 @@
 \maketitle
 
 \tableofcontents
+
+% ============================================================================
+% INTRODUCTION - Geografía y Ambientación
+% ============================================================================
+\include{intro/intro}
 
 % ============================================================================
 % ACT I - Captura
