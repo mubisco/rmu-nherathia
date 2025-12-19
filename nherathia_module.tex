@@ -2,8 +2,17 @@
 
 \documentclass[10pt,a4paper,oneside]{book}
 
-\usepackage[spanish]{babel}
-\usepackage[T1]{fontenc}
+\usepackage{polyglossia}
+\setmainlanguage{spanish}
+\usepackage{fontspec}
+\setmainfont{CrimsonPro}[
+    Path = fonts/,
+    Extension = .ttf,
+    UprightFont = *-Regular,
+    BoldFont = *-Bold,
+    ItalicFont = *-Italic,
+    BoldItalicFont = *-BoldItalic
+]
 \usepackage{csquotes}
 \usepackage{geometry}
 \geometry{margin=2.5cm}
@@ -16,7 +25,8 @@
 \usepackage{eso-pic}                % Background images
 \usepackage{tikz}                   % For opacity control
 \usepackage{xcolor}
-
+\usepackage{xparse}
+\usepackage{enumitem}
 
 % ============================================================================
 % COLOR THEME DEFINITIONS (HTML format for easy editing)
@@ -85,13 +95,14 @@
 }
 
 % Widget 3: NPC Sheet Environment (readable, named sections)
-% Usage: \begin{npcsheet}[subtitle]{NPC Name} ... \end{npcsheet}
-\newenvironment{npcsheet}[2][]{%
+% Usage: \begin{npcsheet}[subtitle][image]{NPC Name} ... \end{npcsheet}
+\NewDocumentEnvironment{npcsheet}{O{} O{} m}{%
   % #1 = optional subtitle
-  % #2 = NPC name (title)
+  % #2 = optional image path
+  % #3 = NPC name (title)
   \def\npcsubtitle{#1}%
-  \def\npcname{#2}%
-  \def\npcimagedata{}%
+  \def\npcimagedata{#2}%
+  \def\npcname{#3}%
   \def\npcappearance{}%
   \def\npcvoice{}%
   \def\npcmotivation{}%
@@ -128,7 +139,7 @@
   \ifx\npcimagedata\empty
   \else
     \begin{center}
-      \includegraphics[width=0.6\linewidth]{\npcimagedata}
+      \includegraphics[width=0.9\linewidth]{\npcimagedata}
     \end{center}
     \vspace{3mm}
   \fi
@@ -157,6 +168,17 @@
   \fi
   
   \end{tcolorbox}
+}
+
+% Widget 4: Image with Black Border
+\newtcolorbox{imagerim}{
+  enhanced,
+  colframe=black,
+  colback=white,
+  boxrule=3pt,
+  sharp corners,
+  left=0pt, right=0pt, top=0pt, bottom=0pt,
+  boxsep=0pt
 }
 
 \title{Ecos del Alba Perdida \\ \large Módulo para Rolemaster Unified}
