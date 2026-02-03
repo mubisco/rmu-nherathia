@@ -1,0 +1,251 @@
+% ============================================================================
+% REUSABLE LATEX WIDGETS FOR RPG MODULES
+% ============================================================================
+%
+% This file contains custom widget definitions that can be reused across
+% different LaTeX documents. To use these widgets, add the following line
+% after your package imports:
+%
+%   \input{components/widgets}
+%
+% Required packages (must be loaded before this file):
+%   - tcolorbox with [most] option
+%   - eso-pic
+%   - tikz
+%   - xcolor
+%   - xparse
+%   - graphicx
+%
+% ============================================================================
+
+% ============================================================================
+% COLOR THEME DEFINITIONS (HTML format for easy editing)
+% ============================================================================
+% Read Aloud Box colors
+\definecolor{ReadAloudBorder}{HTML}{CC6600}   % Orange-brown border
+\definecolor{ReadAloudBG}{HTML}{FFFFFF}       % White background
+
+% Rules Box colors
+\definecolor{RulesBorder}{HTML}{3366CC}       % Blue border
+\definecolor{RulesBG}{HTML}{E6F0FF}           % Light blue background
+\definecolor{RulesTitleBG}{HTML}{3366CC}      % Blue title background
+
+% NPC Sheet colors
+\definecolor{NPCBorder}{HTML}{2E8B57}         % Sea green border
+\definecolor{NPCBG}{HTML}{F0FFF0}             % Honeydew background
+
+% ============================================================================
+% PARCHMENT BACKGROUND COMMAND
+% ============================================================================
+% Usage: \setparchmentbackground{images/parchment.jpg}
+%        \setparchmentbackground[0.75]{images/parchment.jpg}  % custom opacity
+%
+% Parameters:
+%   #1 = opacity (optional, default 0.50)
+%   #2 = image path (required)
+% ============================================================================
+\newcommand{\setparchmentbackground}[2][0.50]{%
+  \AddToShipoutPictureBG{%
+    \AtPageLowerLeft{%
+      \begin{tikzpicture}
+        \node[inner sep=0pt,opacity=#1] {%
+          \includegraphics[width=\paperwidth,height=\paperheight]{#2}%
+        };
+      \end{tikzpicture}%
+    }%
+  }%
+}
+
+% ============================================================================
+% WIDGET 1: READ ALOUD BOX
+% ============================================================================
+% A box for text that should be read aloud to players.
+% Features orange-brown side borders on a white background.
+%
+% Usage:
+%   \begin{readaloud}
+%     The door creaks open revealing a dark chamber...
+%   \end{readaloud}
+% ============================================================================
+\newtcolorbox{readaloud}{
+  enhanced,
+  breakable,
+  colback=ReadAloudBG,
+  colframe=ReadAloudBorder,
+  boxrule=0pt,
+  leftrule=3pt,
+  rightrule=3pt,
+  toprule=0pt,
+  bottomrule=0pt,
+  sharp corners=all,
+  left=8pt, right=8pt, top=5pt, bottom=5pt
+}
+
+% ============================================================================
+% WIDGET 2: RULES BOX
+% ============================================================================
+% A box for rules clarifications and mechanical information.
+% Features a blue border with a "Reglas" title tab.
+%
+% Usage:
+%   \begin{rulesbox}
+%     Players must make a Perception check (difficulty Hard)...
+%   \end{rulesbox}
+% ============================================================================
+\newtcolorbox{rulesbox}{
+  enhanced,
+  breakable,
+  colback=RulesBG,
+  colframe=RulesBorder,
+  fonttitle=\bfseries,
+  title=Reglas,
+  attach boxed title to top left={yshift=-2mm, xshift=5mm},
+  boxed title style={
+    colback=RulesTitleBG,
+    sharp corners
+  },
+  sharp corners=all,
+  boxrule=1pt,
+  left=5pt, right=5pt, top=8pt, bottom=5pt,
+  before skip=8pt plus 2pt,
+  after skip=8pt plus 2pt
+}
+
+% ============================================================================
+% WIDGET 3: NPC SHEET ENVIRONMENT
+% ============================================================================
+% A comprehensive NPC information box with structured fields.
+% Features a green border on a honeydew background.
+%
+% Usage:
+%   \begin{npcsheet}[Optional Subtitle][optional/image/path]{NPC Name}
+%     \appearance{Tall human with silver hair...}
+%     \voice{Deep and gravelly...}
+%     \motivation{Seeks revenge for...}
+%     \stats{Level 5 Fighter, HP 45...}
+%     \secrets{Actually a spy for...}
+%   \end{npcsheet}
+%
+% All field commands are optional - only filled fields will be rendered.
+% ============================================================================
+\NewDocumentEnvironment{npcsheet}{O{} O{} m}{%
+    % #1 = optional subtitle
+    % #2 = optional image path
+    % #3 = NPC name (title)
+
+    \def\npcsubtitle{#1}%
+    \def\npcimagedata{#2}%
+    \def\npcname{#3}%
+    \def\npcappearance{}%
+    \def\npcvoice{}%
+    \def\npcmotivation{}%
+    \def\npcstats{}%
+    \def\npcsecrets{}%
+
+    % Commands to set each field
+    \providecommand{\npcimage}[1]{}%
+    \providecommand{\appearance}[1]{}%
+    \providecommand{\voice}[1]{}%
+    \providecommand{\motivation}[1]{}%
+    \providecommand{\stats}[1]{}%
+    \providecommand{\secrets}[1]{}%
+    \renewcommand{\npcimage}[1]{\def\npcimagedata{##1}}%
+    \renewcommand{\appearance}[1]{\def\npcappearance{##1}}%
+    \renewcommand{\voice}[1]{\def\npcvoice{##1}}%
+    \renewcommand{\motivation}[1]{\def\npcmotivation{##1}}%
+    \renewcommand{\stats}[1]{\def\npcstats{##1}}%
+    \renewcommand{\secrets}[1]{\def\npcsecrets{##1}}%
+
+}{%
+    % End of environment - now render the box
+    \begin{tcolorbox}[
+        enhanced,
+        colback=NPCBG,
+        colframe=NPCBorder,
+        fonttitle=\bfseries\large,
+        title=\npcname,
+        sharp corners=all,
+        boxrule=1.5pt,
+        left=8pt, right=8pt, top=10pt, bottom=8pt,
+        before skip=10pt plus 2pt,
+        after skip=10pt plus 2pt
+    ]
+
+    % Render subtitle if provided
+    \ifx\npcsubtitle\empty
+    \else
+        {\small\itshape\npcsubtitle}
+        \vspace{2mm}
+    \fi
+
+    % Render image if provided
+    \ifx\npcimagedata\empty
+    \else
+        \begin{center}
+        \includegraphics[width=0.9\linewidth]{\npcimagedata}
+        \end{center}
+        \vspace{3mm}
+    \fi
+
+    % Render fields
+    \ifx\npcappearance\empty\else
+        \textbf{Apariencia:} \npcappearance
+        \vspace{2mm}
+    \fi
+
+    \ifx\npcvoice\empty\else
+        \textbf{Voz:} \npcvoice
+        \vspace{2mm}
+    \fi
+
+    \ifx\npcmotivation\empty\else
+        \textbf{Motivación:} \npcmotivation
+        \vspace{2mm}
+    \fi
+
+    \ifx\npcstats\empty\else
+        \textbf{Estadísticas:} \npcstats
+        \vspace{2mm}
+    \fi
+
+    \ifx\npcsecrets\empty\else
+        \textbf{Secretos:} \npcsecrets
+    \fi
+
+    \end{tcolorbox}
+}
+
+% ============================================================================
+% WIDGET 4: IMAGE WITH BORDER
+% ============================================================================
+% Displays an image with a black border frame and optional caption.
+%
+% Usage:
+%   \imagerim{images/dungeon_map.png}
+%   \imagerim{images/dungeon_map.png}[The ancient dungeon entrance]
+%
+% Parameters:
+%   #1 = image path (required)
+%   #2 = caption text (optional)
+% ============================================================================
+\NewDocumentCommand{\imagerim}{ m o }{
+  \begin{tcolorbox}[
+    enhanced,
+    colframe=black,
+    colback=white,
+    boxrule=3pt,
+    sharp corners,
+    left=0pt, right=0pt, top=0pt, bottom=0pt,
+    boxsep=0pt,
+    middle=3pt % Thickness of the segmentation line
+  ]
+    \includegraphics[width=\linewidth]{#1}
+    \IfValueT{#2}{
+      \begin{center}
+        \vspace{-8pt}
+        \itshape #2
+        \vspace{4pt}
+      \end{center}
+    }
+  \end{tcolorbox}
+}
