@@ -2,89 +2,154 @@
 
 \begin{multicols*}{2}
 
-\textbf{Tipo de escena:} Boss Fight (Combate de Jefe), Desafío de Tensión y Resolución Moral.
+\textbf{Tipo de escena:} Boss Fight (Combate de Jefe), Desafío de Tensión y Dilema Moral.
 
 \begin{readaloud}
-La escalera de caracol desemboca en una cripta circular de piedra antigua, muy anterior a la mansión construida encima. El aire aquí es gélido, y vuestro aliento se condensa en nubes blancas.
+La escalera termina en una sala circular excavada en el corazón de la colina. El aire aquí abajo vibra con un zumbido grave que hace doler las muelas.
 
-En el centro, sobre un altar de piedra negra pulida, yace el joven aldeano, atado y amordazado. Sus ojos están desorbitados por el terror.
+En el centro, el \textbf{Altar Negro} —un bloque de obsidiana de la Era de los Reyes— pulsa con luz violeta. Sobre él yace el chico, drogado y encadenado, con la piel pálida por el frío antinatural que emana de la piedra.
 
-Sobre él, el Gobernador Kaelen alza una daga de obsidiana. No lleva su ropa de noble, sino una túnica ceremonial manchada de sangre seca de sacrificios anteriores. El aire a su alrededor vibra; la magia del ritual ya está activa, creando una barrera translúcida alrededor del altar.
+Kaelen está de pie junto al altar. No parece un lord poderoso; parece un hombre roto. Su túnica ceremonial está empapada de sudor y sus manos tiemblan, pero sostienen con firmeza una daga de cristal volcánico. Una barrera translúcida, alimentada por el Altar, lo rodea como una burbuja de cristal sucio.
 
-Al veros entrar, Kaelen no grita de ira, sino de angustia.
+Al veros, no grita con odio, sino con pánico absoluto.
 \end{readaloud}
 
 \subsubsection*{El Conflicto: La Aritmética de la Muerte}
 
-Kaelen no atacará inmediatamente. Intentará ganar tiempo para completar el ritual mientras sus guardaespaldas (si queda alguno) o la propia magia del lugar lo protegen.
+Kaelen no ataca. Su objetivo es completar el ritual. Intentará convenceros mientras el "Reloj del Ritual" avanza.
 
 \begin{displayquote}
-\emph{"¡Atrás! ¡No entendéis lo que hacéis! Si detengo el cántico, la barrera cae. ¡El Velo nos devorará a todos! ¡La vida de este chico compra un mes de seguridad para quinientas personas! ¿Tenéis el coraje de condenar a un pueblo entero por vuestra moralidad?"}
+\emph{"¡Imbéciles! ¡No tenéis ni idea de lo que retenemos aquí! ¡Este Altar es lo único que impide que los muertos de nuestros osarios se levanten! ¡Si detengo el cántico, no solo entrará el Velo... nuestros propios ancestros nos comerán vivos! ¡Atrás!"}
 \end{displayquote}
+
+\begin{mechanicbox}{Regla de Tamaño (RMU Creature Law)}
+Normalmente, atacar piedra con armas de acero requeriría herramientas de minería y mucho tiempo (Character Law, Sec. 6.1). Sin embargo, el Altar está sobrecargado de energía. Los golpes no rompen la roca por fuerza bruta, sino que disrupcionan la integridad mágica que mantiene la piedra unida. Por eso usamos PV y AT en lugar de la regla de degradación por minutos.
+Al ser el Altar un objetivo \textbf{Grande} atacado por armas \textbf{Medias}:
+\begin{itemize}[nosep]
+    \item \textbf{Reducción de Críticos:} La severidad de todos los críticos físicos recibidos se reduce en \textbf{-1 grado}.
+    \begin{itemize}[nosep]
+        \item Crítico 'A' $\rightarrow$ Solo Daño (sin crítico).
+        \item Crítico 'B' $\rightarrow$ Crítico 'A'.
+        \item Crítico 'E' $\rightarrow$ Crítico 'D'.
+    \end{itemize}
+    \item \textbf{Nota:} Esto hace que el Altar sea muy resistente a golpes superficiales, obligando a los jugadores a golpear fuerte para lograr efectos de rotura real.
+\end{itemize}
+\end{mechanicbox}
 
 \subsubsection*{Mecánica del Encuentro: El Reloj del Ritual}
 
-El combate tiene un límite de tiempo estricto de **3 Asaltos** antes de que la daga baje.
+El combate tiene un límite estricto: el ritual finaliza al final del \textbf{3º Asalto}.
 
-\paragraph{El Escudo del Pacto}
-Mientras el ritual está activo, Kaelen está protegido por las almas de los sacrificios anteriores.
-\begin{itemize}
-    \item Kaelen tiene una **DB (Defensa)** adicional de +30.
-    \item Cualquier daño que reciba Kaelen se reduce a la mitad. La otra mitad se transfiere al altar, haciéndolo brillar con luz roja (daño estructural).
+Kaelen está en trance (Concentración al 100\%). No ataca, no para y no se mueve. Su defensa es puramente mágica.
+
+\begin{npcsheet}[Gobernador y Verdugo][images/kaelen_ritual.png]{Kaelen (En Trance)}
+    \appearance{Rodeado de runas flotantes y una barrera traslúcida que vibra con el cántico.}
+    \motivation{Completar el ritual. No romperá su concentración ni para defenderse.}
+    \stats{
+        \textbf{Nivel:} 6 (Layman) \\
+        \textbf{PV:} 65 \\
+        \textbf{AT:} 2 (Túnica Ritual) \\
+        \textbf{DB Actual:} \textbf{75} (Mágica) \\
+        \textbf{Acción:} Concentración total. Si es atacado cuerpo a cuerpo y fallan, el atacante recibe una \textbf{Descarga Eléctrica ('A' Electricity)} por el campo de fuerza.
+    }
+\end{npcsheet}
+
+\paragraph{El Escudo del Pacto (Defensa Mágica)}
+Kaelen está rodeado por un campo de fuerza visible.
+\begin{itemize}[nosep]
+    \item \textbf{Defensa Total (DB):} \textbf{+75} (Base 0 + 40 \emph{Greater Shield} + 25 \emph{Protection V} + 10 \emph{Blur}).
+    \item \textbf{Inmunidad Táctica:} Kaelen es inmune al \emph{Aturdimiento (Stun)} mientras el Altar esté intacto (el dolor se transfiere a la piedra).
 \end{itemize}
 
-\paragraph{Objetivos de los PJ}
-Los jugadores deben elegir su enfoque:
-\begin{enumerate}
-    \item \textbf{Matar a Kaelen:} Deben superar su defensa mejorada y sus puntos de vida antes del Asalto 3.
-    \item \textbf{Romper el Altar:} El altar tiene \textbf{AT 20} (Piedra) y \textbf{50 PV}. Si se destruye, el ritual se cancela y Kaelen pierde sus bonos mágicos, quedando aturdido (Stun) 2 asaltos.
-    \item \textbf{Salvar al Chico:} Un PJ puede intentar cruzar la barrera mágica (Tirada de Resistencia vs Magia: Difícil) para desatar al chico. Esto requiere 2 acciones completas (llegar y cortar).
-\end{enumerate}
+\paragraph{El Artefacto: El Altar Negro}
+Tratado como un \textbf{Constructo Inmóvil de Tamaño Grande (Big)}.
+\begin{itemize}[nosep]
+    \item \textbf{Tamaño (Size):} \textbf{Grande (Big)}.
+    \item \textbf{Tipo de Armadura (AT):} \textbf{10} (Piedra Sólida).
+    \item \textbf{Defensa (DB):} \textbf{-20} (Inmóvil).
+    \item \textbf{Integridad (PV):} \textbf{150 PV} (Base 100 x 1.5 por Tamaño Grande).
+\end{itemize}
 
-\begin{npcsheet}[Gobernador y Verdugo][images/kaelen_ritual.png]{Kaelen (Potenciado)}
-\appearance{Rodeado de un aura rojiza, ojos inyectados en sangre, movimientos acelerados por la magia.}
-\motivation{Terminar el ritual a toda costa para salvar a su pueblo.}
-\stats{
-    \textbf{Nivel:} 6 (Potenciado a 8) \quad \textbf{PV:} 90 \\
-    \textbf{AT:} 12 (Túnica Ritual + Piel Mágica) \\
-    \textbf{OB:} +90 (Daga de Obsidiana - \emph{Slaying Human}) \\
-    \textbf{DB:} 50 (30 base + 20 Ritual)
-}
-\secrets{Si el altar se rompe, pierde 40 PV inmediatamente por el contragolpe mágico.}
-\end{npcsheet}
+\paragraph{Estrategia para los Jugadores}
+\begin{enumerate}
+    \item \textbf{Atacar a Kaelen:} Muy difícil de impactar (+75 DB), pero frágil (65 PV). Si muere o cae inconsciente, el ritual para.
+    \item \textbf{Atacar al Altar:} Impacto automático o muy fácil, pero absorbe mucho daño (150 PV y reduce críticos). Requiere daño masivo constante.
+\end{enumerate}
 
 \subsubsection*{Resolución del Clímax}
 
-\paragraph{Desenlace A: El Ritual se Completa}
-Si los PJ fallan o tardan demasiado, Kaelen clava la daga.
+\paragraph{Desenlace A: El Ritual se Completa (Fracaso)}
+Si pasan 3 asaltos sin detener a Kaelen:
 \begin{itemize}
-    \item El chico muere instantáneamente.
-    \item Una onda de choque expulsa a los PJ de la mansión.
-    \item La barrera de Valmor brilla con fuerza renovada. Los PJ han fallado en salvar al chico, pero el pueblo está seguro... por ahora. Kaelen, roto de dolor, ordena que los arresten, pero Erun les ayuda a escapar. (Final Amargo).
+    \item Kaelen clava la daga. El chico muere. Una onda de energía violeta os lanza contra las paredes (\textbf{Golpe 'A' + 10 PV}).
+    \item La barrera de la ciudad se estabiliza. Kaelen cae llorando sobre el cuerpo. Os ordena arrestar, pero está demasiado roto para luchar. El pueblo sobrevive, pero el coste moral es vuestro.
 \end{itemize}
 
-\paragraph{Desenlace B: El Pacto se Rompe (Canon)}
-Si los PJ matan a Kaelen, destruyen el altar o sacan al chico:
-\begin{itemize}
-    \item El aura roja se disipa violentamente.
-    \item Kaelen cae de rodillas, mirando al techo con horror.
-    \begin{displayquote}
-    \emph{"Lo habéis hecho... Habéis apagado la luz. Dioses... ya vienen."}
-    \end{displayquote}
-    \item Se escucha un sonido horrible en el exterior: el crujido de la madera de la empalizada rompiéndose. No por fuerza física, sino por envejecimiento acelerado. Las runas protectoras se apagan.
+\paragraph{Desenlace B: El Altar se Rompe (Éxito Canon)}
+Si Kaelen cae o el Altar llega a 0 PV:
+
+\begin{readaloud}
+Un chasquido agudo, como el de un hueso gigante al romperse, resuena en la sala. El Altar Negro se parte en dos. La luz violeta se apaga instantáneamente, sumiendo la cripta en la penumbra de vuestras antorchas.
+
+Kaelen es lanzado hacia atrás por el contragolpe mágico. Se arrastra por el suelo, mirando los fragmentos del altar con terror absoluto.
+
+\emph{"Habéis apagado la luz... Dioses, habéis despertado al cementerio."}
+\end{readaloud}
+
+\paragraph{El Equipo del Gobernador (Loot)}
+Kaelen yace inconsciente o muerto. Su túnica ceremonial está arruinada, pero sus objetos de poder siguen intactos.
+
+\begin{itemize}[nosep]
+    \item \textbf{Anillo de Protección Menor:} Un anillo de hierro frío con una runa grabada. Otorga un bono de \textbf{+10 a la DB} constante al portador.
+    \item \textbf{Llave Maestra:} Abre la caja fuerte del despacho y todas las puertas de la mansión.
 \end{itemize}
 
-\subsubsection*{Transición Final: La Noche del Juicio}
+\subsubsection*{El Secreto de la Cripta: La Tumba del Primer Vigía}
 
-Con el ritual roto, la protección de Valmor desaparece. La niebla del Velo, contenida durante años, se precipita sobre la aldea como una presa rota.
+Mientras el polvo del Altar roto se asienta y la realidad empieza a temblar, algo llama vuestra atención en el fondo de la sala, oculto hasta ahora por las sombras del ritual.
 
-Erun el Sabio aparece en la puerta de la cripta, con el mapa en la mano y el rostro pálido.
+El Altar Negro no era lo único aquí abajo. Empotrado en un nicho de la pared de roca viva, hay un sarcófago vertical de piedra mucho más antiguo que la mansión, anterior incluso a la fundación de Valmor. No tiene nombre, solo un relieve desgastado de un guerrero montando guardia eternamente.
+
+La explosión mágica del Altar ha agrietado la tapa del sarcófago, revelando su interior. No hay cuerpo (se ha convertido en polvo hace siglos), pero sus manos esqueléticas aún aferran algo que el tiempo no ha podido tocar.
+
+\begin{tcolorbox}[colback=blue!5, colframe=blue!40, title=Hallazgo: El Arma del Primer Vigía]
+\imagerim{images/treasure_weapon.png}
+Es un arma de diseño antiguo, forjada en un metal pálido y lechoso que parece brillar con luz propia en la oscuridad de la cripta.
+
+\textbf{El GM debe elegir el tipo de arma que mejor encaje con el grupo (Espada Larga, Maza de Guerra, o Lanza).}
+
+\textbf{Estadísticas (RMU):}
+\begin{itemize}[nosep]
+    \item \textbf{Material:} \textbf{Aleación Blanca (White Alloy)}. Una técnica de forja perdida de los Altos Hombres. Es increíblemente ligera y resistente.
+    \item \textbf{Bonificador:} \textbf{+15 OB}. (Superior a las armas de acero normal +0 o acero alto +10).
+    \item \textbf{Propiedades:}
+    \begin{itemize}[nosep]
+        \item \textbf{Toque Fantasma:} Al ser un arma de calidad Superior y antigua, es capaz de dañar a entidades incorpóreas (Sombras, Espectros) sin penalizador de daño.
+        \item \textbf{Luz Tenue:} La hoja emite una luz pálida en un radio de 1 metro cuando se desenvaina, insuficiente para iluminar una sala, pero suficiente para ver dónde se golpea en la oscuridad absoluta.
+    \end{itemize}
+    \item \textbf{Valor:} Incalculable en el mercado actual, pero mecánicamente unos \textbf{400 mp}.
+\end{itemize}
+\end{tcolorbox}
+
+\textbf{Narrativa:}
+Al tomar el arma, sentís un equilibrio perfecto. No pesa; parece querer moverse. Es un arma forjada en una era donde la humanidad no se escondía de la niebla, sino que la combatía.
+
+\subsubsection*{El Despertar de los Muertos}
+
+El efecto inmediato no es visual, sino auditivo.
+Desde algún lugar abajo en el pueblo, cerca de la torre de Erun, se escucha un sonido multitudinario: cientos de uñas arañando piedra desde el interior de los nichos.
+
+Luego, el primer grito humano desde el exterior.
 
 \begin{displayquote}
-\emph{"¡El escudo ha caído! ¡Tenemos que irnos! ¡Ahora!"}
+\emph{"¡Están dentro! ¡Salen de los muros! ¡Ayuda!"}
 \end{displayquote}
 
-Los gritos comienzan a escucharse desde el pueblo. No son gritos de batalla, son gritos de confusión y terror absoluto. Las Sombras están entrando en las casas.
+La barrera ha caído. El Velo ha entrado, y los muertos de Valmor, conservados durante años, se han levantado todos a la vez.
+
+\textbf{Transición:}
+Erun (o Garel, si Erun no está) irrumpe en la escalera de la cripta, pálido como la cera.
+\emph{"¡Corred! ¡El camino a las montañas es lo único que queda! ¡Todo lo demás es muerte!"}
 
 \textbf{Comienza la Escena VII — Huida bajo el Velo.}
 

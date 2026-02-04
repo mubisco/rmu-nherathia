@@ -1,90 +1,194 @@
 \section{Escena III --- La Luz tras la Empalizada}
 
+\begin{tcolorbox}[colback=gray!10, colframe=black!70, title=Nota para el DJ: La Anatomía de Valmor]
+Antes de describir el pueblo, es vital entender por qué Valmor es una anomalía imposible en Nherathia. Utiliza estos datos para responder a las preguntas de los jugadores y dar color a tus descripciones.
+
+\textbf{1. Demografía y Espacio:}
+\begin{itemize}
+    \item \textbf{Población:} Aprox. 500 habitantes. Es una cifra insosteniblemente alta para una aldea aislada, pero necesaria para la "aritmética del sacrificio" de Kaelen (una muerte al mes requiere una población grande para no extinguirse en un año).
+    \item \textbf{Hacinamiento:} Para proteger a tanta gente, el pueblo ha crecido hacia arriba, no hacia afuera. Las casas de piedra y madera oscura tienen 2 o 3 plantas, los callejones son estrechos y las familias viven apiñadas. Es un "bote salvavidas sobrepoblado".
+\end{itemize}
+
+\textbf{2. La Economía de la Sangre (Agricultura):}
+\begin{itemize}
+    \item \textbf{El Anillo Negro:} No hay granjas dispersas (serían letales). Los cultivos forman un anillo apretado de tierra negra y aceitosa pegado al exterior de la empalizada.
+    \item \textbf{Comida Antinatural:} Gracias al ritual, las verduras crecen enormes y rápido, pero tienen un regusto a ceniza metálica. Hay comida de sobra, pero no da placer, solo sustento.
+\end{itemize}
+
+\textbf{3. La Atmósfera:}
+\begin{itemize}
+    \item \textbf{Luz como Escudo:} Valmor quema aceite como si fuera gratis. Farolas en cada esquina y ventanas iluminadas desafían la oscuridad exterior.
+    \item \textbf{Alegría Histérica:} Los habitantes ríen demasiado alto y beben demasiado rápido. Es una negación colectiva del terror que les rodea.
+\end{itemize}
+\end{tcolorbox}
+
 \begin{multicols*}{2}
 
-\textbf{Tipo de escena:} Interacción social, contraste ambiental y falsa seguridad.
+\textbf{Tipo de escena:} Interacción social, exposición narrativa (Lore) y falsa seguridad.
 
 \begin{readaloud}
-Siguiendo el rastro de humo y las indicaciones de Garel, coronáis la última colina justo cuando el sol termina de ahogarse en el horizonte.
-Abajo, en un valle poco profundo, se alza Valmor.
+Siguiendo el rastro de humo, coronáis la última colina justo cuando el sol termina de ahogarse en el horizonte. Abajo, en un valle poco profundo, se alza Valmor.
 
 No es lo que esperabais.
 
-En medio de la neblina gris de Nherathia, Valmor brilla como una brasa en la nieve. Una empalizada de troncos robustos, reforzada con bases de piedra, rodea el pueblo. Pero lo más llamativo no es la madera, sino lo que hay pintado en ella: cada cinco metros, un poste está marcado con glifos de cal blanca y ocre que parecen vibrar levemente contra la oscuridad que avanza.
+Fuera de los muros, pegado a la empalizada como moho en una roca, hay un anillo de cultivos intensivos de tierra negra y aceitosa. Calabazas enormes y coles del tamaño de cabezas humanas crecen en un silencio absoluto, sin nadie que las vigile.
 
-No hay silencio aquí. Incluso desde la distancia, escucháis el ladrido de perros, el golpe de un martillo de herrero y voces humanas. Vida. Un insultante exceso de vida en medio de la tierra muerta.
+El pueblo en sí brilla como una brasa en la nieve. Una empalizada de troncos robustos sobre bases de piedra rodea un núcleo urbano denso, apiñado, donde las casas parecen haberse construido unas sobre otras.
+
+No hay silencio aquí. Escucháis ladridos, martillos y voces. Vida. Un insultante exceso de vida en medio de la tierra muerta.
 \end{readaloud}
-
-\subsubsection*{Localización: La Puerta Norte de Valmor}
-
-Una estructura defensiva sólida. Dos torres de vigilancia flanquean una puerta de roble reforzado. Hay arqueros en las almenas, pero no miran hacia el bosque con miedo, sino con una disciplina militar rígida.
-
-\paragraph{Sensaciones}
-Olor a humo de leña y guiso especiado; la calidez que emana del interior del pueblo choca con el frío del exterior; sensación de ser observado, no por monstruos, sino por ojos humanos calculadores.
 
 \subsubsection*{El Control de Entrada}
 
-Al acercaros, una voz potente os da el alto desde la empalizada. Cuatro guardias con tabardos granates (el color del Gobernador) salen a vuestro encuentro, ballestas en mano pero apuntando al suelo.
+Al acercaros, una voz potente os da el alto. Cuatro guardias con tabardos granates (el color del Gobernador) salen a vuestro encuentro, ballestas en mano pero apuntando al suelo.
 
-El líder, un hombre con el rostro marcado por viruela, os examina. No busca armas, busca signos de "infección" del Velo (ojos negros, piel pálida, sombras extrañas).
+El líder, el **Capitán Harek**, os examina buscando signos de "infección" del Velo (ojos negros, piel pálida).
 
 \begin{npcsheet}[Capitán de la Guardia][images/capitan_valmor.png]{Capitán Harek}
-\appearance{Rostro picado de viruela, armadura de cuero tachonado bien cuidada, capa granate.}
-\voice{Profesional, seca, sin la superstición habitual de los campesinos.}
-\motivation{Mantener la paz del Gobernador y asegurar que nadie traiga "problemas" de fuera.}
+\appearance{Rostro picado de viruela, armadura de cuero tachonado de calidad, capa granate.}
+\voice{Profesional, seca, militar.}
+\motivation{Mantener la paz del Gobernador y cobrar los impuestos.}
 \stats{
-  \textbf{Nivel:} 4 \\
-  \textbf{Profesión:} Guerrero \\
-  \textbf{PV:} 75 \\
-  \textbf{AT:} 9 (Cuero Rígido) \\
-  \textbf{Habilidades:} Percepción +50, Liderazgo +40, Espada Ancha +75
+    \textbf{Nivel:} 4 \quad \textbf{AT:} 9 (Cuero) \\
+    \textbf{Habilidades:} Percepción +50, Espada Ancha +75
 }
 \end{npcsheet}
 
-\paragraph{Interacción}
-Harek es pragmático. Si los PJ parecen peligrosos pero cuerdos, son bienvenidos.
+\paragraph{El Peaje de la Luz}
+Harek es pragmático. Si los PJ no parecen Ecos o locos, son bienvenidos, pero deben pagar.
+
 \begin{itemize}
-    \item \textbf{El Peaje:} \emph{"La entrada cuesta 5 monedas de cobre por cabeza. El Gobernador Kaelen ofrece seguridad, y la seguridad se paga."}
-    \item \textbf{Las Armas:} \emph{"Podéis conservar el acero. Aquí todos duermen con una daga bajo la almohada. Pero si desenfundáis sin causa, os colgaremos de la empalizada como advertencia para las sombras."}
-    \item \textbf{La Advertencia:} \emph{"Buscad alojamiento en 'El Escudo'. Y un consejo: cuando suene la campana de medianoche, no estéis en la calle. Las patrullas no hacen preguntas a esa hora."}
+    \item \textbf{Coste:} \emph{"La entrada son 5 cobres por cabeza. El Gobernador Kaelen ofrece luz y piedra, y eso cuesta dinero."}
+    \item \textbf{La Regla de Oro:} \emph{"Conservad vuestro acero, pero no lo uséis. Y cuando suene la campana de medianoche, desapareced de las calles. Las patrullas nocturnas no hacen preguntas."}
 \end{itemize}
 
-\subsubsection*{El Interior: Una Normalidad Forzada}
+\subsubsection*{El Interior: La Ciudadela Rural}
 
-Al cruzar el umbral, el cambio es físico. El aire es más cálido. Las calles están pavimentadas con adoquines (algo raro en esta región) y hay faroles de aceite en cada esquina.
-
-La gente camina rápido, saluda en voz alta y ríe con fuerza.
-\textbf{Tirada de Percepción / Intuición (Difícil):}
+Al cruzar el umbral, el cambio es físico.
 \begin{itemize}
-    \item \textbf{Éxito:} Notas que la alegría es frenética, casi histérica. Beben demasiado rápido, ríen demasiado fuerte. Nadie mira hacia las ventanas oscuras de los pisos superiores. Es como si el silencio fuera el enemigo y trataran de llenarlo con ruido.
+    \item \textbf{Luz:} Hay faroles de aceite en cada esquina, un despilfarro impensable en el exterior.
+    \item \textbf{Arquitectura:} Las calles están adoquinadas. Las casas son de piedra sólida y madera nueva, muchas con segundas plantas añadidas apresuradamente para albergar a más gente.
+    \item \textbf{Ambiente:} La gente camina rápido y habla alto, como si intentaran llenar el silencio del mundo con ruido.
 \end{itemize}
 
 \subsubsection*{La Posada "El Escudo del Descanso"}
 
-Un edificio de piedra y madera de dos plantas. La sala común está abarrotada, caliente y ruidosa. Hay comida real (estofado de venado, pan fresco) y cerveza.
+Un edificio robusto de dos plantas. La sala común está abarrotada, caliente y ruidosa. Huele a guiso especiado y cerveza.
 
-\paragraph{Rumores en la Posada (Gather Information)}
-Si los jugadores escuchan o preguntan (sin ser demasiado directos):
-\begin{itemize}
-    \item \emph{"La cosecha ha sido buena. Kaelen sabe cómo tratar con la tierra."} (Admiración con miedo).
-    \item \emph{"Dicen que la niebla se tragó una granja entera en el este. Pobres diablos, no quisieron mudarse al pueblo."}
-    \item \emph{"¿El Sabio? El viejo Erun vive en la torre vieja, junto al cementerio. Kaelen lo tolera porque sabe leer las estrellas, pero está loco. Dice que el precio es demasiado alto."} (Pista clave para la siguiente escena).
-\end{itemize}
+En una mesa central, veis una cara familiar. **Garel**, el mercader, se está dejando caer pesadamente en un banco, sacudiéndose el barro del camino de su capa. Acaba de llegar. Al veros entrar tras él, su expresión cansada se transforma en una sonrisa de reconocimiento y os hace un gesto para que os unáis a él.
 
-\subsubsection*{Cierre de la escena}
-
-Tras acomodarse y quizás comer algo caliente por primera vez en días, el ambiente cambia.
-Una campana solitaria tañe en la mansión del Gobernador, situada en la parte alta del pueblo.
-
-El ruido de la posada muere al instante.
-El posadero, un hombre gordo y sudoroso, apaga la mitad de las lámparas.
+\paragraph{La Perspectiva de Garel}
+Garel aún no ha hecho negocios; sus bueyes están recién estabulados y él está hambriento. Pide comida para todos mientras comparte sus primeras impresiones frescas sobre el lugar.
 
 \begin{displayquote}
-\emph{"Medianoche. A las habitaciones. El Gobernador va a... asegurar la noche."}
+\emph{"¡Lo lograsteis! Por un momento pensé que la niebla os había desorientado en el último tramo. Sentaos, invito yo a la primera ronda. Tienen carne. ¡Carne de verdad! Y mirad este pan... el grano es grueso, oscuro."}
 \end{displayquote}
 
-Nadie discute. En segundos, la sala común se vacía. Desde vuestra ventana, veis patrullas de capas granates moviéndose por las calles vacías, llevando no armas, sino cadenas y varas de incienso negro.
+Mientras coméis, Garel baja la voz, inclinándose sobre la mesa con gesto de extrañeza:
+
+\begin{displayquote}
+\emph{"Pero probadlo. ¿Notáis ese regusto? Sabe a... metal. A ceniza fría. No sé qué abono usan en esos campos negros de ahí fuera, pero estas tierras deberían estar agotadas, y miradlos... tienen comida para un ejército. Es antinatural, os lo digo yo. Pero con el estómago lleno, a nadie le importa preguntar."}
+\end{displayquote}
+
+\textbf{Garel como Recurso:}
+Dado que Garel acaba de llegar y el mercado no abre hasta mañana, su carromato en el establo sigue lleno.
+\begin{itemize}
+    \item \textbf{Acceso Exclusivo:} Los jugadores pueden comprarle el **Fuego de Alquimista** o el **Licor de Raíz Negra** antes que nadie (a precio normal).
+    \item \textbf{Almacén:} Puede guardar objetos pesados de los PJ en su carro si planean moverse ligeros por el pueblo.
+\end{itemize}
+
+\paragraph{Rumores Locales (Gather Information)}
+Escuchando a otras mesas o hablando con la posadera:
+
+\begin{itemize}
+    \item \textbf{La Superpoblación:} \emph{"Han llegado tres familias más del oeste esta semana. El Gobernador los ha metido en el barracón sur. Dice que todos caben bajo el Escudo."}
+    \item \textbf{El Sabio:} \emph{"¿Buscáis saber antiguo? Id a ver al viejo Erun en la torre rota, junto al cementerio. Kaelen lo tolera porque lee las estrellas, pero el viejo dice que nuestras luces proyectan sombras demasiado largas."}
+\end{itemize}
+
+\subsubsection*{Cierre de la escena: El Toque de Queda}
+
+El ambiente festivo muere de golpe cuando una campana solitaria tañe desde la mansión en la colina alta.
+
+El posadero apaga la mitad de las lámparas. Garel se levanta de inmediato, perdiendo su sonrisa.
+
+\begin{displayquote}
+\emph{"Medianoche. A las habitaciones. Ya. Cuando el Gobernador asegura la noche, no queréis que os confundan con el diezmo."}
+\end{displayquote}
+
+Desde la ventana de vuestra habitación, veis patrullas con capas granates moviéndose por las calles vacías. No llevan antorchas, sino varas de incienso negro y cadenas.
+
+\subsection*{Sub-trama Opcional: La Patrulla del Diezmo}
+
+Si los jugadores deciden ignorar la advertencia del toque de queda y seguir a la patrulla de incienso y cadenas, se inicia esta secuencia.
+
+\subsubsection*{Fase 1: La Persecución en las Sombras}
+
+Los personajes deben seguir a la patrulla a través de las calles vacías y adoquinadas sin ser vistos.
+
+\begin{mechanicbox}{Maniobra Enfrentada (Stalking vs Perception)}
+Jugadores (Activos): Tirada de \textbf{Acechar (Stalking)}\\
+Guardias (Pasivos): Tirada de \textbf{Percepción}\\
+\textbf{Modificadores:}
+\begin{itemize}[nosep]
+    \item \textbf{Oscuridad/Niebla:} +20 a Acechar / -20 a Percepción.
+    \item \textbf{Entorno Urbano (Esquinas/Barriles):} +10 a Acechar.
+    \item \textbf{Incienso:} El humo denso dificulta la visión de los guardias (-10 a Percepción).
+\end{itemize}
+\end{mechanicbox}
+
+\paragraph{Éxito de los PJ:} Siguen a la patrulla hasta una casa humilde en el distrito bajo sin ser detectados. (Pasa a \emph{Fase 2}).
+
+\paragraph{Fallo (Los Guardias ganan):} La patrulla se detiene. El Capitán de la patrulla se gira lentamente hacia la posición de los PJ. No atacan de inmediato; tienen una misión sagrada que no quieren interrumpir con sangre sucia.
+\begin{displayquote}
+\emph{"El toque de queda es absoluto. Volved a vuestro agujero, forasteros, o asumiremos que os ofrecéis voluntarios para ocupar el lugar del diezmo."}
+\end{displayquote}
+Si los jugadores no se retiran inmediatamente, los guardias atacan (ver \emph{Fase 3}).
+
+\subsubsection*{Fase 2: La Entrega}
+
+Si los PJ observan desde las sombras, ven una escena escalofriante por su falta de violencia.
+La patrulla no derriba la puerta; golpean tres veces con respeto ceremonial.
+Un hombre abre la puerta. Está pálido y tiembla, pero asiente. Segundos después, saca a empujones a un joven (de unos 16 años). El chico parece drogado o sonámbulo, con la mirada perdida.
+
+Los guardias aseguran las cadenas en las muñecas del chico y le hacen aspirar directamente de la vara de incienso, dejándolo totalmente dócil.
+
+\subsubsection*{Fase 3: La Intervención}
+
+Si los jugadores deciden salir de las sombras para "salvar" al chico, ocurre el giro narrativo.
+
+\paragraph{El Muro de los Padres}
+Antes de que los PJ puedan atacar a los guardias, los padres del chico se interponen en el camino de los aventureros. No llevan armas, pero bloquean el paso con desesperación.
+
+\begin{readaloud}
+El padre os empuja con manos débiles, llorando de rabia.
+\emph{"¡Atrás! ¡Idiotas! ¡No sabéis lo que hacéis!"}
+
+La madre se abraza a sus otros dos hijos pequeños en el umbral de la puerta, mirándoos con terror.
+\emph{"¡Si él no va, la niebla entrará a por todos! ¡Es el precio! ¡El sorteo fue justo!"}
+\end{readaloud}
+
+\paragraph{El Dilema:}
+Los padres explican a gritos que si el sacrificio se interrumpe, la barrera caerá y morirán todos (incluidos sus hijos pequeños). Ven a los PJ como monstruos que ponen en peligro a la comunidad por un heroísmo malentendido.
+
+El chico, drogado, apenas reacciona, murmurando: \emph{"La niebla tiene hambre... debo ir..."}.
+
+\paragraph{Resolución Violenta}
+Si los jugadores ignoran a los padres (o los apartan por la fuerza) y atacan a la patrulla:
+
+\textbf{Enemigos: Patrulla de la Guardia Granate}
+\begin{itemize}
+    \item \textbf{1 Capitán de Patrulla (Nvl 5):} Usa las stats del \emph{Capitán Harek} (Escena III).
+    \item \textbf{2 Guardias de Élite (Nvl 4):} Usa las stats de la \emph{Guardia Granate} (Escena V).
+\end{itemize}
+
+\textbf{Consecuencias del Combate:}
+\begin{itemize}
+    \item \textbf{Alarma:} Al primer asalto, el Capitán soplará un silbato. Tienen \textbf{3 asaltos} para acabar el combate antes de que lleguen refuerzos infinitos.
+    \item \textbf{Ruptura de la Trama:} Si matan a la patrulla y "liberan" al chico, la \textbf{Escena IV (La Audiencia)} se cancela. Los PJ pasan a ser enemigos públicos en Valmor. Deberán esconderse hasta que Erun contacte con ellos en secreto para iniciar la \textbf{Escena V}.
+\end{itemize}
 
 \textbf{Comienza la Escena IV — La Audiencia y el Sabio.}
 
 \end{multicols*}
+
+\imagerim{images/valmor.png}[Aldea de Valmor]
