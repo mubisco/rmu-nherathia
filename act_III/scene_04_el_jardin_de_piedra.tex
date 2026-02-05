@@ -2,105 +2,162 @@
 
 \begin{multicols*}{2}
 
-\textbf{Tipo de escena:} Boss Fight (Combate con fases), Puzzle Táctico y Clímax Emocional.
+\textbf{Tipo de escena:} Boss Fight (Combate con fases), Puzle Táctico y Clímax Emocional.
 
 \begin{readaloud}
 La puerta de raíces se abre con un gemido de madera seca.
 
 La cámara final es inmensa, una cúpula natural iluminada por grietas en el techo por las que se filtra la luz de la luna, cayendo como lanzas de plata sobre la oscuridad.
 
-En el centro, sobre un montículo de tierra negra que parece respirar, se alza un árbol colosal. Pero no es de madera; es de piedra blanca, veteada de gris.
+En el centro, sobre un montículo de tierra negra que parece respirar, se alza un árbol colosal de piedra blanca veteada de gris.
 
-Fusionado con el tronco, a medio camino entre ser hombre y ser rama, está el cuerpo de \textbf{Aelor}, el Druida Guardián. Su piel es corteza, su cabello es musgo seco. No está muerto, pero tampoco vivo. Es una cáscara preservada por el Velo.
+Fusionado con el tronco, a medio camino entre ser hombre y ser rama, está el cuerpo de \textbf{Poderun} (el nombre corrupto de Pod de Faerûn). Su piel es corteza, su cabello es musgo seco. No está muerto, pero tampoco vivo; es una cáscara preservada por el Velo y la magia druídica retorcida.
 
-En sus manos, clavado en el suelo como una estaca que impide que algo salga, brilla el bastón. \textbf{La Raíz del Horizonte}. La madera del bastón pulsa con luz ámbar, luchando contra las sombras que intentan trepar por él.
+En sus manos, clavado en el suelo como una estaca que impide que algo salga, brilla el bastón: \textbf{La Raíz del Horizonte}. La madera del bastón pulsa con luz ámbar, luchando contra las sombras que intentan trepar por él.
 
-Cuando entráis, los ojos del Druida se abren. No tienen iris, solo una luz violeta vacía. El suelo tiembla. Las raíces a vuestros pies se despiertan.
+Cuando entráis, los ojos de Poderun se abren. No tienen iris, solo una luz violeta vacía. El suelo tiembla.
 \end{readaloud}
 
-\subsubsection*{El Enemigo: El Guardián Corrupto}
+\subsubsection*{El Guardián Corrupto}
 
-El Velo ha animado el cuerpo de Aelor y lo utiliza como una marioneta para defender la posición.
+Poderun no puede moverse del sitio (está enraizado), pero su alcance es toda la sala.
 
-\textbf{Mecánica del Combate:}
-El Guardián está \textbf{Inmóvil} (fusionado al árbol central), pero controla todo el terreno.
-El objetivo no es matar a Aelor (su cuerpo es durísimo), sino \textbf{arrancar el Bastón} para romper el flujo de energía corrupta.
-
-\begin{npcsheet}[Jefe Final - Muerto Viviente/Planta][images/guardian_corrupto.png]{Aelor, El Guardián Corrupto}
-    \appearance{Un torso humanoide gigante de madera y piedra emergiendo de un árbol. Sus brazos son ramas largas con garras de obsidiana.}
+\begin{npcsheet}[Druida Corrupto][images/poderun_boss.png]{Poderun (Nvl 7)}
+    \appearance{Un torso humanoide de madera y piedra emergiendo de un árbol gigante. Brazos largos como ramas.}
+    \motivation{Proteger el sello. Su mente está fragmentada; ve a los PJ como "termitas" o amenazas para el árbol.}
     \stats{
-        \textbf{Nivel:} 8 (Boss) \quad \textbf{PV:} 200 (Ver "El Vínculo") \\
-        \textbf{AT:} 10 (Piel de Piedra/Corteza) \\
-        \textbf{DB:} 20 (Dura piel) \\
-        \textbf{OB:} +90 (Golpe de Rama - Aplastamiento Grande) \\
-        \textbf{Ataque a Distancia:} +70 (Espinas - Rango 20m)
+        \textbf{Nivel:} 7 (Druida/Elementalista) \quad \textbf{PV:} 150 \\
+        \textbf{AT:} 13 (Corteza de Piedra - Cuenta como Placas) \\
+        \textbf{DB:} 20 (Dureza natural) \\
+        \textbf{Inmunidades:} Aturdimiento (Stun), Sangrado, Veneno [Traits de Plantas/Constructo]. \\
+        \textbf{Debilidad:} Fuego (x2 Daño y Críticos de Calor un nivel superior).
     }
-    \secrets{\textbf{Inmunidades:} Aturdimiento, Sangrado, Mental. Vulnerable al Fuego (x2 Daño).}
+    \textbf{Ataques:}
+    \begin{itemize}
+        \item \textbf{Ramas-Garra (Melee):} +80 OB (Grande). Alcance 3m. Daño de Aplastamiento (Krush).
+        \item \textbf{Espinas (Rango):} +60 OB. Alcance 20m. Daño de Perforación (Puncture).
+    \end{itemize}
+    \textbf{Hechizos (Channeling):}
+    \begin{itemize}
+        \item \emph{Plant Mastery} (Animar raíces).
+        \item \emph{Nature's Wrath} (Proyectiles o enredaderas).
+    \end{itemize}
 \end{npcsheet}
 
-\subsubsection*{Peligros del Entorno (Lair Actions)}
+\subsubsection*{Mecánica del Entorno: El Suelo Vivo}
 
-Al inicio de cada asalto, el Guardián usa una acción gratuita del entorno:
+El suelo de la sala está vivo. Esto no es una acción del monstruo, sino una condición ambiental constante que se resuelve en la \textbf{Fase de Mantenimiento (Upkeep Phase)} de cada asalto [Core Law Sec. 8.5].
 
-\begin{enumerate}
-    \item \textbf{Raíces Sujetadoras:} Todos los PJ deben hacer una maniobra de \textbf{Acrobacias/Evasión (Medio)}. Fallo: Quedan \textbf{Inmovilizados} (Presa 50\%) por raíces que brotan del suelo.
-    \item \textbf{Drenaje Vital:} Si alguien está apresado por raíces, pierde \textbf{5 PV} que el Guardián absorbe para curarse.
-\end{enumerate}
+\textbf{Efecto de Mantenimiento - Raíces Sujetadoras:}
+Al final de cada asalto, cualquier personaje que esté tocando el suelo (no volando o levitando) debe hacer una \textbf{Maniobra de Movimiento/Acrobacias - Medio}:
+\begin{itemize}
+    \item \textbf{Fallo:} Las raíces se enredan en sus piernas. El personaje queda \textbf{Inmovilizado} (0 AP de movimiento, -20 a otras acciones) hasta que se libere (Maniobra de Fuerza o cortar las raíces).
+    \item \textbf{Crítico de Fallo:} Además de inmovilizado, sufre un ataque de \textbf{Presa (Grapple) +40}.
+\end{itemize}
 
 \subsubsection*{El Objetivo: La Raíz del Horizonte}
 
-El bastón está clavado en el "corazón" del árbol. Para finalizar el combate, un personaje debe llegar hasta él, agarrarlo y superar una tirada de fuerza o voluntad para arrancarlo.
+El bastón está clavado en el "corazón" del árbol. Poderun es inmortal mientras el bastón siga conectado a la tierra. Para vencer, debéis arrancarlo.
+
+\begin{mechanicbox}{La Extracción (Maniobra de Porcentaje Acumulada)}
+Un personaje adyacente al bastón debe gastar su asalto completo para intentar liberarlo. El objetivo es acumular un \textbf{100\% de Éxito}.
+
+\textbf{1. Elegir Habilidad (Dificultad: Difícil -10):}
+\begin{itemize}
+    \item \textbf{Fuerza Bruta:} Usa \textbf{Weight-training (St)}.
+    \item \textbf{Voluntad/Magia:} Usa \textbf{Attunement} o \textbf{Mental Focus}.
+\end{itemize}
+
+\textbf{2. Acumular:}
+Cada asalto, tira y suma el resultado de la Tabla de Maniobras Estáticas (en formato porcentaje) al total acumulado.
+\begin{itemize}
+    \item \emph{Ejemplo:} Un resultado de '10' suma un 10\% al progreso. Un 'Fallo' no suma nada.
+\end{itemize}
+
+\textbf{3. El Precio del Dolor (Retroceso):}
+El personaje que toca el bastón se convierte en el \textbf{objetivo prioritario} de Poderun.
+\begin{itemize}
+    \item Si el personaje recibe daño (PV) mientras extrae el bastón, \textbf{el porcentaje acumulado se reduce en una cantidad igual a los PV sufridos}.
+    \item \emph{Ejemplo:} Tienes el bastón al 80\%. Poderun te golpea y te hace 20 PV de daño. El progreso baja al 60\%.
+\end{itemize}
+
+\textbf{Ayuda:} Otro personaje adyacente puede gastar su acción para "proteger" o "ayudar" al extractor, otorgándole un bono de \textbf{+10} a su tirada o recibiendo el ataque de Poderun en su lugar (Interponerse).
+\end{mechanicbox}
 
 \textbf{El Aura de la Reliquia:}
-El área a 3 metros del bastón es "Terreno Sagrado".
+El área a 1.5 metros (1 casilla) del bastón es "Terreno Sagrado".
 \begin{itemize}
-    \item Dentro de este círculo, los PJ ganan \textbf{+20 RR} contra los hechizos del Guardián.
-    \item El Guardián no puede atacar con raíces dentro de este círculo (solo con sus garras).
+    \item Dentro de este círculo, las raíces del suelo (Fase de Mantenimiento) no actúan.
 \end{itemize}
 
-\textbf{Arrancar el Bastón:}
-Requiere una Acción de Asalto Completo estando adyacente.
+\begin{tcolorbox}[colback=white, colframe=black!75!white, title=\textbf{Detalles del Mapa Táctico: El Sanctasanctórum de Piedra}]
+
+\textbf{Especificaciones Generales:}
 \begin{itemize}
-    \item \textbf{Tirada:} \textbf{Fuerza (Brawn)} o \textbf{Voluntad (Will)} - Difícil (-10).
-    \item \textbf{Ayuda:} Si el Guardián recibe más de 20 PV de daño en ese asalto, su agarre se debilita (+20 a la tirada de arrancar).
-    \item \textbf{Éxito:} El bastón se libera. (Ver Desenlace).
+    \item \textbf{Forma y Dimensiones:} Una sala circular abovedada. Diámetro de 20 casillas (30 metros).
+    \item \textbf{Escala:} 1 casilla = 1.5 metros (5 pies).
+    \item \textbf{Iluminación:} \textbf{Penumbra (Dim Light)}. La sala está oscura (-20 a percepción), excepto por tres haces de luz lunar que caen desde el techo (Luz Normal), creando columnas de iluminación dramática.
 \end{itemize}
 
-\subsubsection*{Desenlace: La Liberación}
+\textbf{Elementos del Terreno:}
+\begin{itemize}
+    \item \textbf{Centro (El Túmulo del Árbol):}
+    \begin{itemize}
+        \item Un montículo de tierra negra de 3 casillas de radio en el centro exacto.
+        \item \textbf{Elevación:} El montículo sube 1.5m (otorga +10 a ataques desde arriba).
+        \item \textbf{El Árbol de Piedra:} Ocupa las 2x2 casillas centrales. Es \textbf{Cobertura Dura (Hard Cover)} y bloquea la línea de visión. Poderun está fusionado en el lado Sur del tronco.
+    \end{itemize}
+    
+    \item \textbf{El Suelo (Zona de Peligro):}
+    Todo el suelo de tierra, excepto el montículo central, se considera \textbf{Terreno Traicionero}. Es aquí donde se aplica la mecánica de \textit{Raíces Sujetadoras} en la fase de mantenimiento.
+    
+    \item \textbf{Zonas Seguras (Losas Ancestrales):}
+    Dispersas por la sala hay 4 o 5 losas de piedra negra de los Primeros Habitantes (1 casilla cada una).
+    \begin{itemize}
+        \item \textbf{Efecto Táctico:} Las raíces no pueden brotar a través de esta piedra. Un personaje parado sobre una losa es \textbf{inmune} a la mecánica de apresamiento ambiental. Esto fomenta que los jugadores salten de "isla en isla".
+    \end{itemize}
+    
+    \item \textbf{Obstáculos (Cobertura):}
+    Restos de columnas derrumbadas en el perímetro exterior. Proveen \textbf{Cobertura Dura Parcial} contra los ataques a distancia (Espinas) de Poderun.
+\end{itemize}
 
-En el momento en que el bastón es arrancado de la tierra corrupta:
+\textbf{Posicionamiento:}
+\begin{itemize}
+    \item \textbf{Poderun (Jefe):} Inmóvil en el centro, fusionado al árbol, mirando hacia la entrada (Sur).
+    \item \textbf{Jugadores:} Entran por el Sur. Deben cruzar unos 10-12 metros de "Suelo Vivo" para llegar al montículo y alcanzar el Bastón.
+\end{itemize}
+
+\end{tcolorbox}
+
+\subsubsection*{Desenlace}
+
+En el momento en que la Raíz del Horizonte es liberada:
 
 \begin{readaloud}
-Un destello de luz ámbar, cálida como un atardecer de verano, estalla desde el bastón, cegando la luz violeta de los ojos del Guardián.
+Un destello de luz ámbar, cálida como un atardecer de verano, estalla desde el bastón.
 
-El cuerpo de piedra y madera de Aelor se arquea y emite un sonido que no es un grito, sino un suspiro profundo, como un árbol viejo cayendo en el bosque.
+El cuerpo de piedra y madera de Poderun se arquea. La corteza de su rostro se resquebraja, revelando por un instante la piel humana que hubo debajo. Sus ojos violetas parpadean y se vuelven de un color avellana natural.
 
-Las raíces negras se marchitan instantáneamente, convirtiéndose en polvo gris. La corrupción se evapora. El cuerpo del Druida se desploma hacia adelante, separándose del árbol, ahora inerte.
+\emph{"...la tierra... recuerda..."} —susurra con una voz que suena a hojas secas pisadas.
 
-Por un segundo, antes de que el cuerpo se deshaga en tierra fértil, veis una sonrisa en su rostro de corteza.
-
-\emph{"Gracias... el camino está... al norte."}
+Luego, el cuerpo se deshace en polvo y tierra fértil, dejando caer una llave de hierro negro y una bolsa de componentes que no se ha podrido. El árbol de piedra detrás de él se agrieta y se oscurece, inerte.
 \end{readaloud}
 
 \subsubsection*{Recompensa: La Primera Reliquia}
 
-El silencio vuelve a la sala, pero ahora es un silencio natural, tranquilo. Tenéis en vuestras manos la \textbf{Raíz del Horizonte}.
+El silencio vuelve a la sala. Tenéis en vuestras manos la \textbf{Raíz del Horizonte}.
 
 \begin{tcolorbox}[colback=green!5, colframe=green!40, title=Reliquia: La Raíz del Horizonte (Estado Dormido)]
 \imagerim{images/raiz_horizonte.png}
 Un bastón de fresno petrificado con vetas de luz ámbar.
 \begin{itemize}
     \item \textbf{Bono:} +15 OB (Bastón).
-    \item \textbf{Poder Pasivo:} +20 a Supervivencia y Orientación. El portador siente dónde está el norte y el agua pura.
-    \item \textbf{Poder Activo (1/día):} \textbf{El Círculo de Raíces}. Clavándolo en el suelo, crea un refugio de 3m de radio. El Velo no puede cruzarlo y elimina la fatiga por clima dentro.
-    \item \textbf{Resonancia:} Vibra suavemente si apunta hacia el Este o el Sur (donde están las otras reliquias perdidas).
+    \item \textbf{Poder Pasivo:} El portador ignora los penalizadores por terreno difícil natural (bosque/barro).
+    \item \textbf{Poder Activo (1/día):} \textbf{Santuario de Raíces}. Clavándolo en el suelo (2 asaltos), crea una cúpula de raíces de 3m de radio. El Velo no puede cruzarla y proporciona descanso seguro (recuperación de Fatiga).
+    \item \textbf{Resonancia:} Vibra suavemente si apunta hacia el Este o el Sur (donde están las otras reliquias).
 \end{itemize}
 \end{tcolorbox}
 
-De repente, la sala empieza a temblar. No por magia, sino por inestabilidad estructural. Sin la magia del Guardián sosteniéndolo, el santuario colapsa. Una corriente de aire fresco entra por una grieta que se ha abierto tras el trono del árbol.
-
-Es la salida.
-
-\textbf{Comienza la Escena V (Final) — El Paso del Gigante.}
+\textbf{Nota de Lore:} Un PJ con \emph{Lore: History} o \emph{Read Runes} puede notar que el nombre grabado en la base del bastón no es "Aelor", sino "Pod...", seguido de runas en un idioma extranjero (Común de Faerûn) que significan "El Viajero".
 
 \end{multicols*}
