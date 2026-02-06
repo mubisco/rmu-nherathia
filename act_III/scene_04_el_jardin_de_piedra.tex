@@ -4,150 +4,51 @@
 
 \textbf{Tipo de escena:} Boss Fight (Combate con fases), Puzle Táctico y Clímax Emocional.
 
-\begin{readaloud}
+\begin{readbox}
 La puerta de raíces se abre con un gemido de madera seca.
 
 La cámara final es inmensa, una cúpula natural iluminada por grietas en el techo por las que se filtra la luz de la luna, cayendo como lanzas de plata sobre la oscuridad.
 
 En el centro, sobre un montículo de tierra negra que parece respirar, se alza un árbol colosal de piedra blanca veteada de gris.
 
-Fusionado con el tronco, a medio camino entre ser hombre y ser rama, está el cuerpo de \textbf{Poderun} (el nombre corrupto de Pod de Faerûn). Su piel es corteza, su cabello es musgo seco. No está muerto, pero tampoco vivo; es una cáscara preservada por el Velo y la magia druídica retorcida.
+Fusionado con el tronco, a medio camino entre ser hombre y ser rama, está el cuerpo de \textbf{Poderun}. Su piel es corteza, su cabello es musgo seco. No está muerto, pero tampoco vivo; es una cáscara preservada por el Velo y la magia druídica retorcida.
 
 En sus manos, clavado en el suelo como una estaca que impide que algo salga, brilla el bastón: \textbf{La Raíz del Horizonte}. La madera del bastón pulsa con luz ámbar, luchando contra las sombras que intentan trepar por él.
 
 Cuando entráis, los ojos de Poderun se abren. No tienen iris, solo una luz violeta vacía. El suelo tiembla.
-\end{readaloud}
+\end{readbox}
 
-\subsubsection*{El Guardián Corrupto}
+\subsubsection*{El Guardián del Sello}
 
-Poderun no puede moverse del sitio (está enraizado), pero su alcance es toda la sala.
+Poderun no puede moverse del sitio (está enraizado), pero su magia impregna toda la sala. Su mente está fragmentada; os ve como parásitos intentando devorar las raíces sagradas.
 
-\begin{npcsheet}[Druida Corrupto][images/poderun_boss.png]{Poderun (Nvl 7)}
-    \appearance{Un torso humanoide de madera y piedra emergiendo de un árbol gigante. Brazos largos como ramas.}
-    \motivation{Proteger el sello. Su mente está fragmentada; ve a los PJ como "termitas" o amenazas para el árbol.}
-    \stats{
-        \textbf{Nivel:} 7 (Druida/Elementalista) \quad \textbf{PV:} 150 \\
-        \textbf{AT:} 13 (Corteza de Piedra - Cuenta como Placas) \\
-        \textbf{DB:} 20 (Dureza natural) \\
-        \textbf{Inmunidades:} Aturdimiento (Stun), Sangrado, Veneno [Traits de Plantas/Constructo]. \\
-        \textbf{Debilidad:} Fuego (x2 Daño y Críticos de Calor un nivel superior).
-    }
-    \textbf{Ataques:}
-    \begin{itemize}
-        \item \textbf{Ramas-Garra (Melee):} +80 OB (Grande). Alcance 3m. Daño de Aplastamiento (Krush).
-        \item \textbf{Espinas (Rango):} +60 OB. Alcance 20m. Daño de Perforación (Puncture).
-    \end{itemize}
-    \textbf{Hechizos (Channeling):}
-    \begin{itemize}
-        \item \emph{Plant Mastery} (Animar raíces).
-        \item \emph{Nature's Wrath} (Proyectiles o enredaderas).
-    \end{itemize}
-\end{npcsheet}
+El combate es inevitable, pero no es una lucha convencional. Poderun se regenera constantemente gracias a la tierra corrupta.
 
-\subsubsection*{Mecánica del Entorno: El Suelo Vivo}
+\textbf{El Objetivo:} El bastón está clavado en el "corazón" del árbol. Mientras siga conectado a la tierra, Poderun es inmortal. Para vencer, debéis arrancarlo.
 
-El suelo de la sala está vivo. Esto no es una acción del monstruo, sino una condición ambiental constante que se resuelve en la \textbf{Fase de Mantenimiento (Upkeep Phase)} de cada asalto [Core Law Sec. 8.5].
-
-\textbf{Efecto de Mantenimiento - Raíces Sujetadoras:}
-Al final de cada asalto, cualquier personaje que esté tocando el suelo (no volando o levitando) debe hacer una \textbf{Maniobra de Movimiento/Acrobacias - Medio}:
-\begin{itemize}
-    \item \textbf{Fallo:} Las raíces se enredan en sus piernas. El personaje queda \textbf{Inmovilizado} (0 AP de movimiento, -20 a otras acciones) hasta que se libere (Maniobra de Fuerza o cortar las raíces).
-    \item \textbf{Crítico de Fallo:} Además de inmovilizado, sufre un ataque de \textbf{Presa (Grapple) +40}.
-\end{itemize}
-
-\subsubsection*{El Objetivo: La Raíz del Horizonte}
-
-El bastón está clavado en el "corazón" del árbol. Poderun es inmortal mientras el bastón siga conectado a la tierra. Para vencer, debéis arrancarlo.
-
-\begin{mechanicbox}{La Extracción (Maniobra de Porcentaje Acumulada)}
-Un personaje adyacente al bastón debe gastar su asalto completo para intentar liberarlo. El objetivo es acumular un \textbf{100\% de Éxito}.
-
-\textbf{1. Elegir Habilidad (Dificultad: Difícil -10):}
-\begin{itemize}
-    \item \textbf{Fuerza Bruta:} Usa \textbf{Weight-training (St)}.
-    \item \textbf{Voluntad/Magia:} Usa \textbf{Attunement} o \textbf{Mental Focus}.
-\end{itemize}
-
-\textbf{2. Acumular:}
-Cada asalto, tira y suma el resultado de la Tabla de Maniobras Estáticas (en formato porcentaje) al total acumulado.
-\begin{itemize}
-    \item \emph{Ejemplo:} Un resultado de '10' suma un 10\% al progreso. Un 'Fallo' no suma nada.
-\end{itemize}
-
-\textbf{3. El Precio del Dolor (Retroceso):}
-El personaje que toca el bastón se convierte en el \textbf{objetivo prioritario} de Poderun.
-\begin{itemize}
-    \item Si el personaje recibe daño (PV) mientras extrae el bastón, \textbf{el porcentaje acumulado se reduce en una cantidad igual a los PV sufridos}.
-    \item \emph{Ejemplo:} Tienes el bastón al 80\%. Poderun te golpea y te hace 20 PV de daño. El progreso baja al 60\%.
-\end{itemize}
-
-\textbf{Ayuda:} Otro personaje adyacente puede gastar su acción para "proteger" o "ayudar" al extractor, otorgándole un bono de \textbf{+10} a su tirada o recibiendo el ataque de Poderun en su lugar (Interponerse).
-\end{mechanicbox}
-
-\textbf{El Aura de la Reliquia:}
-El área a 1.5 metros (1 casilla) del bastón es "Terreno Sagrado".
-\begin{itemize}
-    \item Dentro de este círculo, las raíces del suelo (Fase de Mantenimiento) no actúan.
-\end{itemize}
-
-\begin{tcolorbox}[colback=white, colframe=black!75!white, title=\textbf{Detalles del Mapa Táctico: El Sanctasanctórum de Piedra}]
-
-\textbf{Especificaciones Generales:}
-\begin{itemize}
-    \item \textbf{Forma y Dimensiones:} Una sala circular abovedada. Diámetro de 20 casillas (30 metros).
-    \item \textbf{Escala:} 1 casilla = 1.5 metros (5 pies).
-    \item \textbf{Iluminación:} \textbf{Penumbra (Dim Light)}. La sala está oscura (-20 a percepción), excepto por tres haces de luz lunar que caen desde el techo (Luz Normal), creando columnas de iluminación dramática.
-\end{itemize}
-
-\textbf{Elementos del Terreno:}
-\begin{itemize}
-    \item \textbf{Centro (El Túmulo del Árbol):}
-    \begin{itemize}
-        \item Un montículo de tierra negra de 3 casillas de radio en el centro exacto.
-        \item \textbf{Elevación:} El montículo sube 1.5m (otorga +10 a ataques desde arriba).
-        \item \textbf{El Árbol de Piedra:} Ocupa las 2x2 casillas centrales. Es \textbf{Cobertura Dura (Hard Cover)} y bloquea la línea de visión. Poderun está fusionado en el lado Sur del tronco.
-    \end{itemize}
-    
-    \item \textbf{El Suelo (Zona de Peligro):}
-    Todo el suelo de tierra, excepto el montículo central, se considera \textbf{Terreno Traicionero}. Es aquí donde se aplica la mecánica de \textit{Raíces Sujetadoras} en la fase de mantenimiento.
-    
-    \item \textbf{Zonas Seguras (Losas Ancestrales):}
-    Dispersas por la sala hay 4 o 5 losas de piedra negra de los Primeros Habitantes (1 casilla cada una).
-    \begin{itemize}
-        \item \textbf{Efecto Táctico:} Las raíces no pueden brotar a través de esta piedra. Un personaje parado sobre una losa es \textbf{inmune} a la mecánica de apresamiento ambiental. Esto fomenta que los jugadores salten de "isla en isla".
-    \end{itemize}
-    
-    \item \textbf{Obstáculos (Cobertura):}
-    Restos de columnas derrumbadas en el perímetro exterior. Proveen \textbf{Cobertura Dura Parcial} contra los ataques a distancia (Espinas) de Poderun.
-\end{itemize}
-
-\textbf{Posicionamiento:}
-\begin{itemize}
-    \item \textbf{Poderun (Jefe):} Inmóvil en el centro, fusionado al árbol, mirando hacia la entrada (Sur).
-    \item \textbf{Jugadores:} Entran por el Sur. Deben cruzar unos 10-12 metros de "Suelo Vivo" para llegar al montículo y alcanzar el Bastón.
-\end{itemize}
-
-\end{tcolorbox}
+\textit{Ver \textbf{Encuentro Táctico IV-A} al final de la escena para el mapa, las estadísticas de Poderun y las reglas de extracción.}
 
 \subsubsection*{Desenlace}
 
-En el momento en que la Raíz del Horizonte es liberada:
+En el momento en que la Raíz del Horizonte es liberada y el vínculo se rompe:
 
-\begin{readaloud}
-Un destello de luz ámbar, cálida como un atardecer de verano, estalla desde el bastón.
+\begin{readbox}
+Un destello de luz ámbar, cálida como un atardecer de verano, estalla desde el bastón, cegando la oscuridad violeta del Velo.
 
-El cuerpo de piedra y madera de Poderun se arquea. La corteza de su rostro se resquebraja, revelando por un instante la piel humana que hubo debajo. Sus ojos violetas parpadean y se vuelven de un color avellana natural.
+El cuerpo de piedra y madera de Poderun se arquea hacia atrás. La corteza de su rostro se resquebraja y cae, revelando por un instante la piel humana que hubo debajo. Sus ojos violetas parpadean y se vuelven de un color avellana natural, llenos de lágrimas.
 
 \emph{"...la tierra... recuerda..."} —susurra con una voz que suena a hojas secas pisadas.
 
-Luego, el cuerpo se deshace en polvo y tierra fértil, dejando caer una llave de hierro negro y una bolsa de componentes que no se ha podrido. El árbol de piedra detrás de él se agrieta y se oscurece, inerte.
-\end{readaloud}
+Luego, el cuerpo se deshace en polvo y tierra fértil. El árbol de piedra detrás de él se agrieta y se oscurece, quedando inerte y silencioso.
+\end{readbox}
 
 \subsubsection*{Recompensa: La Primera Reliquia}
 
-El silencio vuelve a la sala. Tenéis en vuestras manos la \textbf{Raíz del Horizonte}.
+El silencio vuelve a la sala. Entre el montón de tierra que fue el druida, encontráis una llave de hierro negro y una bolsa de componentes que no se ha podrido.
 
-\begin{tcolorbox}[colback=green!5, colframe=green!40, title=Reliquia: La Raíz del Horizonte (Estado Dormido)]
+Pero el verdadero premio está en vuestras manos.
+
+\begin{relicbox}{La Raíz del Horizonte (Estado Dormido)}
 \imagerim{images/raiz_horizonte.png}
 Un bastón de fresno petrificado con vetas de luz ámbar.
 \begin{itemize}
@@ -156,8 +57,67 @@ Un bastón de fresno petrificado con vetas de luz ámbar.
     \item \textbf{Poder Activo (1/día):} \textbf{Santuario de Raíces}. Clavándolo en el suelo (2 asaltos), crea una cúpula de raíces de 3m de radio. El Velo no puede cruzarla y proporciona descanso seguro (recuperación de Fatiga).
     \item \textbf{Resonancia:} Vibra suavemente si apunta hacia el Este o el Sur (donde están las otras reliquias).
 \end{itemize}
-\end{tcolorbox}
+\end{relicbox}
 
-\textbf{Nota de Lore:} Un PJ con \emph{Lore: History} o \emph{Read Runes} puede notar que el nombre grabado en la base del bastón no es "Aelor", sino "Pod...", seguido de runas en un idioma extranjero (Común de Faerûn) que significan "El Viajero".
+\begin{gmnote}[Nota de Lore]
+Un personaje con \emph{Lore: History} o \emph{Read Runes} puede notar que el nombre grabado en la base del bastón no es "Poderun", sino "Pod...", seguido de runas en un idioma extranjero (Común de Faerûn) que significan "El Viajero".
+\end{gmnote}
+
+La cúpula empieza a temblar. Con la muerte del Guardián, el santuario se está volviendo inestable. Una grieta se abre tras el trono del árbol, revelando un túnel de salida hacia el aire frío de la montaña.
+
+\textbf{Continuar a la Escena V — El Paso del Gigante.}
 
 \end{multicols*}
+
+% --- SECCIÓN TÁCTICA ---
+\newpage
+
+\begin{tacticalscene}{El Sanctasanctórum de Piedra (IV-A)}
+
+\textbf{Configuración del Escenario:}
+\begin{itemize}
+    \item \textbf{Dimensiones:} Sala circular abovedada (30m diámetro).
+    \item \textbf{Iluminación:} Penumbra (-20 a percepción/ataques distancia). Tres haces de luz lunar (Luz normal) caen aleatoriamente.
+    \item \textbf{El Árbol:} Centro de la sala. Cobertura Dura. Poderun está fusionado en el lado Sur.
+    \item \textbf{Zonas Seguras:} 4 losas de piedra negra dispersas. Inmunes al efecto de suelo.
+\end{itemize}
+
+\begin{mechanics}{Condición Ambiental: El Suelo Vivo}
+En la \textbf{Fase de Mantenimiento (Upkeep)} de cada asalto, cualquier personaje que toque el suelo de tierra (no las losas) debe realizar una Maniobra:
+\begin{itemize}
+    \item \textbf{Tirada:} \textbf{Movimiento/Acrobacias - Medio}.
+    \item \textbf{Fallo:} Las raíces sujetan al PJ. Queda \textbf{Inmovilizado} (0 AP movimiento, -20 acciones) hasta liberarse (Maniobra de Fuerza o cortar raíces).
+    \item \textbf{Fallo Absoluto:} Sufre ataque de Presa (Grapple) +40.
+\end{itemize}
+\end{mechanics}
+
+\begin{mechanics}{Objetivo: La Extracción (Maniobra Acumulada)}
+Un PJ adyacente al bastón debe gastar su asalto completo para liberarlo. Objetivo: \textbf{100\% Acumulado}.
+\begin{enumerate}
+    \item \textbf{Elegir Habilidad (Dificultad Difícil -10):}
+    \begin{itemize}
+        \item Fuerza: \textit{Weight-training (St)}.
+        \item Voluntad/Magia: \textit{Attunement} o \textit{Mental Focus}.
+    \end{itemize}
+    \item \textbf{El Precio del Dolor:} Si el PJ recibe daño (PV) mientras extrae, \textbf{resta los PV sufridos al \% acumulado}.
+\end{enumerate}
+\end{mechanics}
+
+\tcbline
+
+\textbf{ENEMIGOS}
+
+\begin{statblock}[images/poderun_boss.png]{Poderun (Druida Corrupto)}{Nvl 7 | PV 150 | AT 10 (Piedra) | DB 20}
+    \textbf{Tipo:} Constructo Grande (Inmune a Stun, Sangrado, Veneno). \\
+    \textbf{Debilidad:} Fuego (x2 Daño, Críticos suben un nivel de severidad). \\
+    \textbf{Ataques:}
+    \begin{itemize}
+        \item \textbf{Ramas-Garra (Melé):} +80 OB. Alcance 3m.
+        \\ \textit{Tabla:} \textbf{Club} (Garrote). \textit{Tamaño:} \textbf{Big (B)}.
+        \item \textbf{Lluvia de Espinas (Rango):} +60 OB. Alcance 20m.
+        \\ \textit{Tabla:} \textbf{Stinger} (Aguijón). \textit{Tamaño:} \textbf{Medium (M)}.
+    \end{itemize}
+    \textbf{Hechizos:} \emph{Plant Mastery} (Animar raíces), \emph{Nature's Wrath}.
+\end{statblock}
+
+\end{tacticalscene}
