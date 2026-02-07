@@ -327,28 +327,84 @@
     before skip=8pt plus 2pt, after skip=8pt plus 2pt
 }
 
-% NPCSUMMARY (Copia de npcsheet para perfiles sociales)
+% NPCSUMMARY (Versión Corregida)
 \NewDocumentEnvironment{npcsummary}{O{} O{} m}{%
-    \def\npcsubtitle{#1}\def\npcimagedata{#2}\def\npcname{#3}%
-    \def\npcappearance{}\def\npcvoice{}\def\npcmotivation{}\def\npcstats{}\def\npcsecrets{}%
+    % Definición de variables internas
+    \def\npcsubtitle{#1}%
+    \def\npcimagedata{#2}%
+    \def\npcname{#3}%
+    \def\npcappearance{}%
+    \def\npcvoice{}%
+    \def\npcmotivation{}%
+    \def\npcstats{}%
+    \def\npcsecrets{}%
+
+    % Aseguramos que los comandos existen antes de redefinirlos
+    \providecommand{\appearance}[1]{}%
+    \providecommand{\voice}[1]{}%
+    \providecommand{\motivation}[1]{}%
+    \providecommand{\stats}[1]{}%
+    \providecommand{\secrets}[1]{}%
+
+    % Ahora redirigimos los comandos a nuestras variables locales
     \renewcommand{\appearance}[1]{\def\npcappearance{##1}}%
     \renewcommand{\voice}[1]{\def\npcvoice{##1}}%
     \renewcommand{\motivation}[1]{\def\npcmotivation{##1}}%
     \renewcommand{\stats}[1]{\def\npcstats{##1}}%
     \renewcommand{\secrets}[1]{\def\npcsecrets{##1}}%
 }{%
+    % Renderizado de la caja
     \begin{tcolorbox}[
-        enhanced, colback=NPCBG, colframe=NPCBorder,
-        fonttitle=\bfseries\large, title=\npcname,
-        sharp corners=all, boxrule=1.5pt,
-        left=8pt, right=8pt, top=10pt, bottom=8pt
+        enhanced,
+        colback=NPCBG,
+        colframe=NPCBorder,
+        fonttitle=\bfseries\large,
+        title=\npcname,
+        sharp corners=all,
+        boxrule=1.5pt,
+        left=8pt, right=8pt, top=10pt, bottom=8pt,
+        before skip=10pt plus 2pt,
+        after skip=10pt plus 2pt
     ]
-    \ifx\npcsubtitle\empty\else{\small\itshape\npcsubtitle}\vspace{2mm}\fi
-    \ifx\npcimagedata\empty\else\begin{center}\includegraphics[width=0.9\linewidth]{\npcimagedata}\end{center}\vspace{3mm}\fi
-    \ifx\npcappearance\empty\else\textbf{Apariencia:} \npcappearance\par\vspace{2mm}\fi
-    \ifx\npcvoice\empty\else\textbf{Voz:} \npcvoice\par\vspace{2mm}\fi
-    \ifx\npcmotivation\empty\else\textbf{Motivación:} \npcmotivation\par\vspace{2mm}\fi
-    \ifx\npcsecrets\empty\else\tcbline\textbf{Secretos:} \npcsecrets\fi
+        % Subtítulo
+        \ifx\npcsubtitle\empty\else
+            {\small\itshape\npcsubtitle}
+            \vspace{2mm}
+        \fi
+
+        % Imagen
+        \ifx\npcimagedata\empty\else
+            \begin{center}
+                \includegraphics[width=0.9\linewidth]{\npcimagedata}
+            \end{center}
+            \vspace{3mm}
+        \fi
+
+        % Campos de texto
+        \ifx\npcappearance\empty\else
+            \textbf{Apariencia:} \npcappearance
+            \par\vspace{2mm}
+        \fi
+
+        \ifx\npcvoice\empty\else
+            \textbf{Voz:} \npcvoice
+            \par\vspace{2mm}
+        \fi
+
+        \ifx\npcmotivation\empty\else
+            \textbf{Motivación:} \npcmotivation
+            \par\vspace{2mm}
+        \fi
+        
+        \ifx\npcstats\empty\else
+            \textbf{Estadísticas:} \npcstats
+            \par\vspace{2mm}
+        \fi
+
+        \ifx\npcsecrets\empty\else
+            \tcbline
+            \textbf{Secretos:} \npcsecrets
+        \fi
     \end{tcolorbox}
 }
 
