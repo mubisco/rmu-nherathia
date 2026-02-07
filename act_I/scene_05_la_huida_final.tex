@@ -1,101 +1,172 @@
 \section{Escena V --- La Huida Final}
 
-\begin{multicols*}{2}
+\begin{multicols}{2}
 
-\textbf{Tipo de escena:} Dungeon Crawl, Terror (sigilo/combate), Revelación mística y Acción final.
+\textbf{Tipo de escena:} Dungeon Crawl, Terror (sigilo), Loot y Huida Final.
 
-\begin{readaloud}
-La trampilla se ha fusionado con el techo. No hay vuelta atrás.
+\begin{readbox}
+La trampilla se ha fusionado con el techo de piedra. No hay vuelta atrás.
+
 El aire aquí abajo es frío y huele a agua estancada y tiempo muerto. La luz de vuestra antorcha apenas empuja la oscuridad unos metros; más allá, las sombras parecen tener peso propio.
 
-La Brújula de Orim vibra en vuestras manos. Su aguja no señala una dirección fija, sino que oscila como si buscara un latido en la profundidad.
-\end{readaloud}
+La \textbf{Brújula de Ecos} vibra en vuestras manos. Su aguja no señala una dirección fija, sino que oscila violentamente, como si buscara un latido en la profundidad.
+\end{readbox}
 
-\subsubsection*{Localización: El Osario de los Sin Nombre}
+\subsubsection*{El Osario de los Sin Nombre}
 
-Antiguas catacumbas pre-imperiales. Techos bajos, nichos en las paredes llenos de huesos que han sido limados hasta borrar cualquier rasgo distintivo.
+Estáis en unas catacumbas pre-imperiales. Los techos son bajos y las paredes están forradas de nichos llenos de huesos que han sido limados hasta borrar cualquier rasgo distintivo.
 
-\paragraph{Sensaciones}
-Silencio absoluto roto solo por el goteo de agua; sensación de ser observado por las cuencas vacías de los cráneos; frío húmedo.
+Al cruzar una sala amplia con columnas rotas, escucháis un sonido metálico: cadenas arrastrándose sobre la piedra y respiraciones rasposas.
 
-\subsubsection*{Encuentro: Los Penitentes}
+\begin{mechanics}{Desafío: Los Penitentes (Sigilo)}
+Los \textbf{Penitentes} son prisioneros muertos que el Velo no dejó marchar. Tienen máscaras de hierro fundidas a la piel. Son ciegos, pero su oído es sobrenatural.
 
-Al cruzar una sala amplia con columnas rotas, los PJ escuchan un arrastrar de cadenas y respiraciones rasposas.
-Son los \textbf{Penitentes}: prisioneros que murieron aquí abajo y el Velo no les permitió irse.
+\textbf{Maniobra Enfrentada:}
 \begin{itemize}
-    \item \textbf{Descripción:} Humanoides escuálidos. Tienen máscaras de hierro oxidadas \emph{fundidas} a la piel de la cara. No tienen ojos.
-    \item \textbf{Mecánica de Terror:} Son ciegos. Se guían por el sonido. Si los PJ superan tiradas de \textbf{Sigilo}, pueden evitarlos o atacar con ventaja (Sorpresa). Si hacen ruido, los Penitentes cargan con un alarido metálico.
+    \item \textbf{PJs (Activos):} Tirada de \textbf{Acechar (Stalking)}.
+    \item \textbf{Penitentes (Pasivos):} Tirada de \textbf{Percepción (Bono +50 por Oído agudo)}.
 \end{itemize}
 
-\begin{npcsheet}[Muertos Vivientes Menores][images/penitente.jpg]{Penitentes del Velo}
-\appearance{Piel grisácea, máscaras de hierro oxidadas, dedos convertidos en garras.}
-\motivation{Destruir cualquier sonido que rompa su silencio.}
-\secrets{Son sensibles a la luz fuerte; el fuego les aterroriza.}
-\end{npcsheet}
+\textbf{Modificadores:}
+\begin{itemize}
+    \item \textbf{Oscuridad:} +20 a Acechar (ellos no ven).
+    \item \textbf{Silencio:} Si los jugadores no hablan ni llevan armaduras pesadas ruidosas (+10).
+\end{itemize}
+
+\textbf{Fallo:} Los Penitentes aúllan y cargan. (Ver \textit{Encuentro Táctico V-A}).
+\end{mechanics}
 
 \subsubsection*{El Hallazgo: El Cadáver Borrado}
 
-Tras el encuentro, en un recodo del túnel donde se filtra agua salada del puerto, encuentran un cadáver "fresco". No está podrido, pero su piel es lisa, como cera derretida. No tiene cara.
+En un recodo del túnel, donde se filtra agua salada del puerto, encontráis un cadáver "fresco". Su piel es lisa, como cera derretida; no tiene rostro. En sus manos aferra una bolsa de cuero encerado.
 
-En sus manos, aferra una bolsa de cuero encerado. Es el botín.
+Dentro hay un diario con las últimas páginas legibles:
 
-\paragraph{El Diario del Fugitivo}
-El diario está escrito con letra temblorosa. Las últimas páginas revelan la verdad:
 \begin{displayquote}
 \emph{"Llegué al agua. Creí que era libre. Pero al tocar el mar... empecé a deshacerme. El agua salada no acepta lo que el Silente ha tocado. No podemos salir por mar. Nos disolvemos. Dioses, mi mano... ya no tiene dedos."}
 \end{displayquote}
 
-\paragraph{Tesoro (Loot)}
-Dentro de la bolsa encuentran equipo que el fugitivo robó antes de morir:
+\begin{itembox}{El Botín del Fugitivo}
+El fugitivo robó equipo de la guarnición antes de huir.
 \begin{itemize}
-    \item \textbf{Daga de Acero Estelar (Starfall):} Una hoja oscura, fría al tacto. Material meteórico superior (+10 a la rotura, golpea como mágica).
-    \item \textbf{2 Pociones de Curación:} Líquido ámbar espeso. (Recuperan 1d10 PV).
-    \item \textbf{Runa de Hoja (Bladerune):} Un papel con un glifo complejo. Al frotarlo contra un arma, esta se vuelve mágica (+10) durante 10 minutos.
-    \item \textbf{Monedas Antiguas:} Una bolsa con monedas de plata acuñadas con leones, de una era anterior al Velo (Valor: 50 monedas de plata).
+    \item \textbf{Daga de Acero Estelar (Starfall):} Hoja negra, fría al tacto. Material meteórico. Cuenta como mágica y otorga \textbf{+10 BO} intrínseco.
+    \item \textbf{2x Viales de Curación (Heal V):} Líquido ámbar y denso.
+    \begin{itemize}
+        \item \textbf{Efecto:} Beberla (2 AP) lanza instantáneamente \emph{Heal V}. Recupera \textbf{25 PV} fijos
+    \end{itemize}
+    \item \textbf{Aceite de Afilado (Lotion Potion):} Un frasco de cristal con un aceite grisáceo.
+    \begin{itemize}
+        \item \textbf{Mecánica:} Se aplica sobre un arma (4 Asaltos / 1 min).
+        \item \textbf{Efecto:} Imbuye el hechizo \emph{Weapon II}. El arma se vuelve mágica y gana \textbf{+10 BO} durante 24 horas (o hasta que se limpie el aceite).
+    \end{itemize}
+    \item \textbf{Bolsa de Monedas:} 50 monedas de plata imperiales antiguas.
 \end{itemize}
+\end{itembox}
 
-\subsubsection*{La Profecía de Yenar}
+\subsubsection*{La Revelación del Norte}
 
-Cuando los jugadores comprenden que están atrapados (no pueden volver a la ciudad, no pueden huir por mar), la desesperación activa el "regalo" de Yenar.
+La desesperación de saber que no podéis huir por mar activa el último regalo de la resistencia. La \textbf{Brújula de Ecos} emite un chasquido metálico y deja de oscilar.
 
-La \textbf{Brújula de Orim} emite un chasquido. La aguja se clava violentamente hacia el \textbf{Norte}.
-En la mente de todos los PJ, resuena la voz de Yenar Strig, clara y lúcida, sin la locura de la celda:
+La aguja se clava, rígida y brillante, apuntando hacia una única dirección: el \textbf{Norte}.
 
-\begin{displayquote}
-\emph{"El agua lava el nombre hasta borrarlo. Solo la piedra recuerda.\\
-Buscad la Corona de Fuego Pálido donde el norte se rompe.\\
-Allí... el silencio tiene grietas.\\
-Allí... podréis recuperar vuestros nombres."}
-\end{displayquote}
-
-\textbf{El Click:} Ahora tienen un destino (Norte/Ruinas) y una motivación (Curar su maldición antes de desvanecerse como el cadáver).
+No hay voces ni profecías. Solo una certeza fría: el Sur es la prisión, el Este y Oeste son el mar que disuelve, y el Norte... el Norte es lo desconocido, pero es el único camino que la aguja permite.
 
 \subsubsection*{Clímax: La Posta Militar}
 
-El túnel asciende y termina en una rejilla oxidada que da al exterior.
-Salen a la superficie en una noche cerrada y neblinosa. Están en los establos traseros de una \textbf{Posta de la Vigilia}, a las afueras de Portimar.
+El túnel asciende hasta una rejilla oxidada. Al abrirla, salís a la superficie en una noche cerrada y neblinosa.
 
-\paragraph{Situación}
+Estáis en los establos traseros de una \textbf{Posta de la Vigilia}, a las afueras de Portimar. El aire es fresco, pero huele a peligro.
+
+Hay tres caballos ensillados. Dos guardias juegan a los dados sobre un barril, y un enorme \textbf{Mastín del Velo} duerme cerca de la puerta. Tenéis que robar los caballos para llegar a las montañas.
+
+\textit{Id al \textbf{Encuentro Táctico V-B} para resolver la huida.}
+
+\subsubsection*{Cierre del Capítulo I}
+
+Con los caballos al galope (o corriendo hacia la espesura), dejáis atrás las campanas de alarma de Portimar.
+
+Miráis al Norte. La brújula brilla con luz tenue. La ciudad prisión queda atrás, pero el Velo se extiende infinito ante vosotros. La guerra por vuestra memoria ha comenzado.
+
+\textbf{FIN DEL ACTO I.}
+
+\end{multicols}
+
+\newpage
+
+% --- ENCUENTRO OPCIONAL ---
+
+\begin{tacticalscene}{Catacumbas: Los Penitentes (V-A)}
+
+\textbf{Nota para el GM:}
+Este combate solo ocurre si fallaron la tirada de sigilo en las catacumbas.
+
+\textbf{Configuración:}
 \begin{itemize}
-    \item \textbf{Objetivo:} Robar caballos y huir hacia el norte antes de que den la alarma.
-    \item \textbf{Oposición:} Dos guardias humanos (aburridos, jugando a los dados) y un \textbf{Mastín del Velo} (un perro de presa deforme) durmiendo cerca.
+    \item \textbf{Dimensiones:} Pasillo estrecho de piedra húmeda. 3m de ancho x 15m de largo (2x10 casillas).
+    \item \textbf{Iluminación:} Oscuridad Total (Penalizadores de combate a ciegas si no usan antorcha).
+    \item \textbf{Enemigos:} 1 Penitente por Jugador.
 \end{itemize}
 
-\paragraph{Resolución}
-Los jugadores pueden optar por:
+\tcbline
 
+\textbf{ENEMIGOS}
+
+\begin{statblock}[images/penitente.jpg]{Penitente del Velo}{Nvl 2 (Undead) | PV 35 | AT 1 | DB 10}
+    \textbf{Características:} Ciegos (inmunes a ilusiones visuales, -50 a combatir en silencio total). Se guían por el sonido.
+    \textbf{Ataques:}
+    \begin{itemize}
+        \item \textbf{Garras Oxidadas (Melee):} +40 OB.
+        \\ \textit{Tabla:} \textbf{Claw}. \textit{Críticos:} Slash (S).
+        \item \textbf{Presa del Ahogado:} Si hacen crítico, inician Presa (\textit{Grapple}) automáticamente.
+    \end{itemize}
+\end{statblock}
+
+\end{tacticalscene}
+
+% --- ENCUENTRO CLÍMAX ---
+\newpage
+
+\begin{tacticalscene}{La Posta Militar (V-B)}
+
+\textbf{Configuración del Escenario:}
 \begin{itemize}
-    \item \textbf{Sigilo:} Robar los caballos sin despertar al perro.
-    \item \textbf{Fuerza:} Eliminar a los guardias rápidamente (tienen las armas y la sorpresa).
-    \item \textbf{Distracción:} Soltar a los caballos para crear el caos y montar sobre la marcha.
+    \item \textbf{Dimensiones:} Patio de establos cercado. 15m x 15m (10x10 casillas).
+    \item \textbf{Terreno:} Paja y barro (Normal). Vallas de madera (Cobertura ligera).
+    \item \textbf{Objetivo:} Montar a caballo (Maniobra de Montar - Medio) y salir por el Norte (Borde superior del mapa).
 \end{itemize}
 
-\subsubsection*{Cierre del Capítulo}
+\imagerim{images/posta.png}
 
-Con los caballos (o corriendo a pie si todo sale mal), los PJ se adentran en la niebla espesa de Nherathia. A sus espaldas, las campanas de alarma de Portimar empiezan a sonar, pero el sonido se ahoga en la bruma.
+\tcbline
 
-Miráis al Norte. La brújula brilla con luz tenue. El viaje hacia lo desconocido ha comenzado.
+\textbf{ESCALADO DEL ENCUENTRO}
+\begin{itemize}
+    \item \textbf{Guardias de la Posta:} 1 por Jugador.
+    \item \textbf{Mastín del Velo:} 1 por Grupo (Si hay 5+ jugadores, añadir un segundo Mastín).
+\end{itemize}
 
-\textbf{FIN DEL CAPÍTULO I}
+\tcbline
 
-\end{multicols*}
+\textbf{ENEMIGOS}
+
+\begin{statblock}[images/guardia_posta.png]{Guardia de la Posta}{Nvl 2 (Fighter) | PV 45 | AT 9 | DB 20}
+    \textbf{Equipo:} Armadura de cuero endurecido, Lanza corta.
+    \textbf{Táctica:} Uno intenta bloquear la salida, el resto ataca a los PJs que intenten montar. Si uno queda libre, corre a tocar la campana (3 asaltos).
+    \textbf{Ataques:}
+    \begin{itemize}
+        \item \textbf{Lanza (Melee):} +55 OB.
+        \\ \textit{Tabla:} \textbf{Spear}. \textit{Críticos:} Puncture (P).
+    \end{itemize}
+\end{statblock}
+
+\begin{statblock}[images/mastin_velo.png]{Mastín del Velo}{Nvl 3 (Animal) | PV 60 | AT 3 | DB 30}
+    \textbf{Descripción:} Perro de presa enorme, piel negra y ojos lechosos.
+    \textbf{Habilidad Especial:} \textbf{Aullido Paralizante} (1/día). Todos en 10m deben pasar RR Física o quedar \textbf{Aturdidos} 1 asalto.
+    \textbf{Ataques:}
+    \begin{itemize}
+        \item \textbf{Mordisco (Melee):} +60 OB.
+        \\ \textit{Tabla:} \textbf{Bite}. \textit{Tamaño:} Medium.
+    \end{itemize}
+\end{statblock}
+
+\end{tacticalscene}
