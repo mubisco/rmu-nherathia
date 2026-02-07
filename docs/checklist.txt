@@ -1,0 +1,27 @@
+--------------------------------------------------------------------------------
+PROTOCOLO DE ESCRITURA: NHERATHIA (RMU)
+1. Formato y Sintaxis (Estricto LaTeX)
+• Negritas: Usar SOLO \textbf{texto}. (PROHIBIDO: **texto**).
+• Cursivas: Usar SOLO \emph{texto}. (PROHIBIDO: *texto*).
+• Comandos: Verificar siempre el cierre de llaves y entornos.
+2. Widgets Específicos (según widgets.tex)
+• Narrativa: \begin{readbox} ... \end{readbox} para descripciones a los jugadores.
+• NPCs: \begin{npcsummary}[Título]{Nombre} con campos \appearance, \voice, \motivation, \secrets.
+• Mecánicas: \begin{mechanics}{Título} para reglas y tiradas.
+• Enemigos: \begin{statblock}[imagen]{Nombre}{Resumen} dentro de tacticalscene.
+• Tesoros: \begin{itembox}{Título} para loot.
+• Notas GM: \begin{gmnote}[Título] para información oculta.
+3. Mecánicas Rolemaster Unified (RMU)
+• Tiradas de Resistencia (RR): La magia es activa.
+    ◦ Ataque: El lanzador tira d100OE + Habilidad + Stats. (Esto fija la dificultad).
+    ◦ Defensa: El objetivo tira RR (d100OE + Stat + Bonos).
+    ◦ Fórmula RR: Tirada + Stat + (2 x Nvl Defensor) - (2 x Nvl Ataque).
+• Maniobras: Siempre indicar Habilidad RMU oficial y Dificultad (Ej: Percepción - Difícil (-10)).
+• Daño: Usar PV (Puntos de Vida) y críticos de RMU (A, B, C, D, E).
+4. Diseño de Encuentros Tácticos
+• Ubicación: El entorno \begin{tacticalscene} SIEMPRE va al final del archivo, tras un \newpage.
+• Dimensiones: SIEMPRE especificar tamaño en Metros y Casillas (1 casilla = 1.5m).
+    ◦ Ej: "Sala de 9x9m (6x6 casillas)."
+• Escalado: Definir número de enemigos según número de jugadores (Ej: "1 orco por PJ + 1").
+
+--------------------------------------------------------------------------------
